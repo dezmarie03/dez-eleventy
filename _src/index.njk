@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+
+<section>
+  <header class="readable">
+    <h1>Welcome! 👋</h1>
+    <h2>I'm Dez, a UX designer and developer living in California.</h2>
+  </header>
+
+  <section>
+    <p>Thanks for visiting me here. You can also find me on <a href="{{ metadata.author.twitter }}" target="_blank" rel="noopener">Twitter</a>, <a href="{{ metadata.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>, <a href="{{ metadata.author.github }}" target="_blank" rel="noopener">GitHub, <a href="{{ metadata.author.dribbble }}" target="_blank" rel="noopener">Dribbble</a>, <a href="{{ metadata.author.instagram }}" target="_blank" rel="noopener">Instagram</a>, and <a href="{{ metadata.author.codepen }}" target="_blank" rel="noopener">CodePen</a>.</p>
+  </section>
+
+  <section>
+    <h3>Latest posts</h3>
+    {% set postlist = cms.allPosts %}
+    {% include 'postlist.njk' %}
+  </section>
+</section>

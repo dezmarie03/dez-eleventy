@@ -1,0 +1,20 @@
+{% for post in postlist %}
+  {% if loop.first %}<ul class="plain-list grid">{% endif %}
+    <li class="postlist-item{% if post.slug == slug %} postlist-item-active{% endif %}">
+      <a href="/posts/{{ post.slug }}" class="postlist-link">
+        <div>
+          <div class="grid-image" style="background-color: {{ post.coverImg.responsiveImage.bgColor }};">
+            <picture>
+              <source media="(min-width: 18em)" srcset="{{ post.coverImg.responsiveImage.srcSet }}">
+              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" style="width: auto;" lazy="true">
+            </picture>
+          </div>
+          <div class="grid-description">
+            <h5>{{ post.title }}</h5>
+            <p>{{ post.seoMeta.description }}</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

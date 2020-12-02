@@ -1,0 +1,27 @@
+{
+  "title": "Dez Beberniss &middot; Product Designer &amp; UX Developer",
+  "brand": "Dez Beberniss",
+  "url": "https://desiraebeberniss.com",
+  "description": "Dez Beberniss is a Product Designer and Front-End Developer focused on web applications and based in Northern California.",
+  "author": {
+    "name": "Dez Beberniss",
+    "email": "dezmarie@gmail.com",
+    "twitter": "https://twitter.com/dezbinatx",
+    "linkedin": "https://www.linkedin.com/in/dezmarie",
+    "github": "https://github.com/dezmarie03",
+    "dribbble": "https://dribbble.com/dezmarie",
+    "instagram": "https://www.instagram.com/dezbinatx",
+    "codepen": "https://codepen.io/dezmarie"
+  },
+  "images": {
+    "social_card_img": "dez_beberniss_social_card.png",
+    "apple-touch-icon": "apple_touch_icon.png",
+    "32x32_icon": "32x32_icon.png",
+    "16x16_icon": "16x16_icon.png",
+    "favicon": "favicon.ico"
+  },
+  "feed": {
+    "path": "/feed.xml",
+    "url": "https://desiraebeberniss.com/feed.xml"
+  }
+}

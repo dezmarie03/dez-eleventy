@@ -1,0 +1,19 @@
+---
+layout: base.njk
+templateClass: tmpl-page
+title: Get in touch
+permalink: /contact/
+eleventyNavigation:
+  key: Contact
+  order: 4
+---
+
+<section class="readable">
+  <h1>{{ title }}</h1>
+
+  <h2>General inquiries</h2>
+  <p>If you’re a fellow front-end person or designer, let’s connect! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>.</p>
+
+  <h2>Recruiting?</h2>
+  <p>If you’re representing companies that have positions for: Product Designers, UX Developers, Junior Front End Developers, or Design Technologists, I’d love to hear more! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a> or reach out through <a href="{{ metadata.author.linkedin }}" rel="noopner" target="_blank">LinkedIn</a>.</p>
+</section>

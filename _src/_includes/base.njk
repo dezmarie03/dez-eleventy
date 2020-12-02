@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or metadata.title | safe }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="generator" content="{{ site.generator }}" />
+    <meta name="title" content="{{ title or metadata.title | safe }}" />
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+    <meta name="pinterest" content="nopin" />
+    <meta name="author" content="{{ metadata.author.name }}" />
+    <meta property="og:title" content="{{ title or metadata.title | safe }}" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <meta property="og:site_name" content="{{ title or metadata.title | safe }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="{{ title or metadata.title | safe }}" />
+    <meta property="twitter:description" content="{{ description or metadata.description }}" />
+    <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ metadata.url }}/img/{{ metadata.images.social_card_img }}" />
+    <link rel="apple-touch-icon" href="{{ metadata.url }}/img/{{ metadata.images.apple_touch_icon }}" sizes="180x180">
+    <link rel="icon" href="{{ metadata.url }}/img/{{ metadata.images.32x32_icon }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ metadata.url }}/img/{{ metadata.images.16x16_icon }}" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="{{ metadata.url }}/img/{{ metadata.images.favicon }}" type="image/x-icon">
+    <link rel="me" href="mailto:dezmarie@gmail.com">
+    <link rel="me" href="{{ metadata.author.twitter }}">
+    <link rel="me" href="{{ metadata.author.linkedin }}">
+    <link rel="me" href="{{ metadata.author.dribbble }}">
+    <link rel="me" href="{{ metadata.author.github }}">
+  </head>
+  <body>
+    <a href="#content" class="skip"><span>Skip to content</span></a>
+    <header id="header">
+      <div class="home"><a rel="me" href="{{ '/' | url }}">{{ metadata.brand }}</a></div>
+      <nav aria-label="Site sections">
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul class="plain-list">
+        {%- for entry in navPages %}
+          <li{% if entry.url == page.url %} class="active"{% endif %}>
+            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content">
+      {{ content | safe }}
+    </main>
+
+    <footer id="footer">
+      <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
+    </footer>
+  </body>
+</html>

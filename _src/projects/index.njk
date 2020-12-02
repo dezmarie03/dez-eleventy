@@ -1,0 +1,16 @@
+---
+layout: base.njk
+templateClass: tmpl-page
+title: Projects
+permalink: /projects/
+eleventyNavigation:
+  key: Projects
+  order: 2
+---
+
+<h1>Projects</h1>
+
+{# Projects #}
+{% set projectlist = cms.allProjects %}
+{% include 'projectlist.njk' %}
+

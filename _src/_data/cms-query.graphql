@@ -1,0 +1,63 @@
+query MyQuery {
+  allPosts(
+    first: "100"
+    skip: "0"
+    orderBy: date_DESC
+    filter: { _status: { eq: published } }
+  ) {
+    body
+    id
+    slug
+    title
+    seoMeta {
+      description
+      image {
+        url
+      }
+    }
+    coverImg {
+      alt
+      url
+      responsiveImage {
+        srcSet
+        src
+        bgColor
+      }
+    }
+    tags
+    date
+    relatedPosts {
+      slug
+      title
+    }
+  }
+  allProjects(
+    first: "100"
+    skip: "0"
+    orderBy: order_DESC
+    filter: { _status: { eq: published } }
+  ) {
+    body
+    id
+    order
+    slug
+    title
+    roleResponsibilities
+    seoMeta {
+      description
+      image {
+        url
+      }
+    }
+    coverImg {
+      alt
+      url
+      responsiveImage {
+        srcSet
+        src
+        bgColor
+      }
+    }
+    tags
+  }
+}
