@@ -1,9 +1,11 @@
 // Styles
 :root {
-  --color-link: #01606f;
-  --color-link-underline: #02adc7;
-  --color-link-focus: rgba(2, 173, 199, 0.25);
-  --color-note: #018094;
+  --color-body: rgba(36, 5, 102, 1);
+  --color-link: #7d07f2;
+  --color-link-underline: #aa86f8;
+  --color-link-focus: rgba(170, 134, 248, 0.1);
+  --color-note: #23d9b7;
+  --color-background: #f7f3ff;
 }
 
 *,
@@ -34,8 +36,8 @@ body {
     Helvetica, Arial, sans-serif, "apple color emoji", "segoe ui emoji",
     "segoe ui symbol";
   line-height: 1.75;
-  color: black;
-  background-color: white;
+  color: var(--color-body);
+  background-color: var(--color-background);
   min-height: 100%;
   overflow-x: hidden;
   padding: 0 3rem;
@@ -56,6 +58,8 @@ a {
   &:focus {
     background-color: var(--color-link-focus);
     border-bottom-color: var(--color-link-underline);
+    outline-color: var(--color-link);
+    outline-style: solid;
   }
 }
 
@@ -68,7 +72,7 @@ ul {
   }
 
   li::marker {
-    color: silver;
+    color: var(--color-link-underline);
   }
 }
 
@@ -318,7 +322,6 @@ pre {
 
   strong {
     display: inline-block;
-    color: white;
     padding: 0 0.75rem;
     background-color: var(--color-note);
     border-radius: 0.25rem;
