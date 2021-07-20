@@ -13,8 +13,16 @@ layout: base.njk
   </section>
 
   <section>
+    <h3>Latest projects</h3>
+    {% set projectlist = cms.allProjects | limit(3) %}
+    {% include 'projectlist.njk' %}
+    <p><a href="/projects" class="directional-arrow right">See all projects</a></p>
+  </section>
+
+  <section>
     <h3>Latest posts</h3>
-    {% set postlist = cms.allPosts %}
+    {% set postlist = cms.allPosts | limit(3) %}
     {% include 'postlist.njk' %}
+    <p><a href="/posts" class="directional-arrow right">See all posts</a></p>
   </section>
 </section>

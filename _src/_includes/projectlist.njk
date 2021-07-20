@@ -1,4 +1,4 @@
-{% for project in projectlist | reverse %}
+{% for project in projectlist %}
   {% if loop.first %}<ul class="plain-list grid">{% endif %}
     <li class="postlist-item{% if post.slug == slug %} postlist-item-active{% endif %}">
       <a href="/projects/{{ project.slug }}" class="postlist-link">

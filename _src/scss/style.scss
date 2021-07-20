@@ -99,6 +99,8 @@ footer {
   margin-right: auto;
 }
 
+/* Typography - Major Third 1.250 */
+
 p {
   margin-bottom: 1rem;
 }
@@ -133,6 +135,25 @@ h5 {
   font-size: 1.25rem;
 }
 
+/* Responsive Type Scaling */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.746rem;
+  }
+  h2 {
+    font-size: 2.197rem;
+  }
+  h3 {
+    font-size: 1.758rem;
+  }
+  h4 {
+    font-size: 1.406rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+}
+
 strong {
   font-weight: bold;
 }
@@ -140,6 +161,27 @@ strong {
 small,
 .text_small {
   font-size: 0.8rem;
+}
+
+.directional-arrow {
+  display: inline-block;
+
+  &.right {
+    padding-right: 0.25rem;
+
+    &::after {
+      position: relative;
+      top: -0.125rem;
+      content: "";
+      display: inline-block;
+      width: 0.4em;
+      height: 0.4em;
+      border-right: 0.125rem solid var(--color-link);
+      border-top: 0.125rem solid var(--color-link);
+      transform: rotate(45deg);
+      margin-left: 0.25rem;
+    }
+  }
 }
 
 .position-relative {

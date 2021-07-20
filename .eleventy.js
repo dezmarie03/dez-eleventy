@@ -39,6 +39,11 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
 
+  // Filter to limit items in a collection loop
+  eleventyConfig.addNunjucksFilter("limit", (arr, limit) => {
+    return arr.slice(0, limit);
+  });
+
   // Copy _src/img folder to _site/img
   eleventyConfig.addPassthroughCopy("_src/img");
 
