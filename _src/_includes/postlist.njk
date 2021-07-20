@@ -5,7 +5,7 @@
         <div>
           <div class="grid-image" style="background-color: {{ post.coverImg.responsiveImage.bgColor }};">
             <picture>
-              <source media="(min-width: 18em)" srcset="{{ post.coverImg.responsiveImage.srcSet }}">
+              <source srcset="{{ post.coverImg.responsiveImage.srcSet }}">
               <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" style="width: auto;" lazy="true">
             </picture>
           </div>
