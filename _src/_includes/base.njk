@@ -31,6 +31,7 @@
     <link rel="me" href="{{ metadata.author.linkedin }}">
     <link rel="me" href="{{ metadata.author.dribbble }}">
     <link rel="me" href="{{ metadata.author.github }}">
+    <script defer src="js/css-doodle.min.js"></script>
   </head>
   <body>
     <a href="#content" class="skip"><span>Skip to content</span></a>
@@ -55,5 +56,16 @@
     <footer id="footer">
       <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
     </footer>
+    <div class="footer-decoration">
+      <css-doodle>
+        <style>
+          @grid: 32 / 100vmax;
+          @size: 1px calc(141.4% + 1px);
+          transform: rotate(@p(±45deg));
+          background: rgba(170, 134, 248, .25);
+          margin: auto;
+        </style>
+      </css-doodle>
+    </div>
   </body>
 </html>

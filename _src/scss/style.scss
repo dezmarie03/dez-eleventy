@@ -34,7 +34,14 @@ body {
   background-color: var(--color-background);
   min-height: 100%;
   overflow-x: hidden;
-  padding: 0 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-decoration {
+  height: 8rem;
+  z-index: -1;
+  overflow: hidden;
 }
 
 img {
@@ -70,8 +77,18 @@ ul {
   }
 }
 
+#header,
+main,
+footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.5rem;
+}
+
 #header {
-  padding: 1rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 1.25rem;
 
   ul li {
     margin-bottom: 0;
@@ -82,15 +99,12 @@ ul {
   #header {
     display: flex;
     align-items: center;
+    padding-top: 1.25rem;
   }
 }
 
-#header,
-main,
-footer {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+main {
+  padding-top: 2.5rem;
 }
 
 /* Typography - Major Third 1.250 */
@@ -213,8 +227,6 @@ nav ul {
 }
 
 .skip {
-  transition: all 0.3s ease-out;
-
   :not(:focus) {
     position: absolute;
     border: 0;
@@ -346,6 +358,12 @@ pre {
   white-space: nowrap;
 }
 
+.decorated-divider {
+  width: 100%;
+  overflow: hidden;
+  margin: 5.5rem auto 5rem;
+}
+
 .note {
   margin-top: 1.75rem;
   margin-bottom: 2.75rem;
@@ -363,5 +381,11 @@ pre {
 }
 
 footer {
-  padding: 1rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.decorated-footer {
+  overflow: hidden;
+  // max-height: 8rem;
 }

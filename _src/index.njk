@@ -19,6 +19,20 @@ layout: base.njk
     <p><a href="/projects" class="directional-arrow right">See all projects</a></p>
   </section>
 
+
+  <div class="decorated-divider">
+    <css-doodle>
+      <style>
+        ::after {
+          content: @repeat(500, _);
+          color: transparent;
+          font-size: 1rem;
+          text-decoration: line-through wavy rgba(170, 134, 248, .25);
+        }
+      </style>
+    </css-doodle>
+  </div>
+
   <section>
     <h3>Latest posts</h3>
     {% set postlist = cms.allPosts | limit(4) %}

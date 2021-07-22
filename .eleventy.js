@@ -47,6 +47,9 @@ module.exports = function(eleventyConfig) {
   // Copy _src/img folder to _site/img
   eleventyConfig.addPassthroughCopy("_src/img");
 
+  // Copy _src/js folder to _site/js
+  eleventyConfig.addPassthroughCopy("_src/js");
+
   return {
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: "njk",
