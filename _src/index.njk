@@ -3,39 +3,27 @@ layout: base.njk
 ---
 
 <section>
-  <header class="readable">
-    <h1>Welcome! 👋</h1>
-    <h2>I'm Dez, a UX designer and developer living in California.</h2>
-  </header>
-
-  <section>
-    <p>Thanks for visiting me here. You can also find me on <a href="{{ metadata.author.twitter }}" target="_blank" rel="noopener">Twitter</a>, <a href="{{ metadata.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>, <a href="{{ metadata.author.github }}" target="_blank" rel="noopener">GitHub, <a href="{{ metadata.author.dribbble }}" target="_blank" rel="noopener">Dribbble</a>, <a href="{{ metadata.author.instagram }}" target="_blank" rel="noopener">Instagram</a>, and <a href="{{ metadata.author.codepen }}" target="_blank" rel="noopener">CodePen</a>.</p>
+  <section id="intro" class="grid-section glowing">
+    <div>
+      <h1>Hey! How's it goin'?</h1>
+      <h2>I'm a designer and developer who specializes in web apps &amp; design systems.</h2>
+      <p>I'm currently seeking a new Product Designer or UI Engineer role with a team that's doing meaningful work. If that's you, <a href="/contact">get in touch</a>! 👋</p>
+    </div>
+    <div class="rounded">
+      <img src="{{ metadata.url }}/img/headshot2.jpg" alt="Photo of me sitting at my computer desk" loading="lazy" />
+    </div>
   </section>
 
-  <section>
+  <section id="projects">
     <h3>Latest projects</h3>
-    {% set projectlist = cms.allProjects | limit(4) %}
+    {% set projectlist = cms.allProjects | limit(3) %}
     {% include 'projectlist.njk' %}
     <p><a href="/projects" class="directional-arrow right">See all projects</a></p>
   </section>
 
-
-  <div class="decorated-divider">
-    <css-doodle>
-      <style>
-        ::after {
-          content: @repeat(500, _);
-          color: transparent;
-          font-size: 1rem;
-          text-decoration: line-through wavy rgba(170, 134, 248, .25);
-        }
-      </style>
-    </css-doodle>
-  </div>
-
-  <section>
+  <section id="posts">
     <h3>Latest posts</h3>
-    {% set postlist = cms.allPosts | limit(4) %}
+    {% set postlist = cms.allPosts | limit(3) %}
     {% include 'postlist.njk' %}
     <p><a href="/posts" class="directional-arrow right">See all posts</a></p>
   </section>

@@ -31,41 +31,37 @@
     <link rel="me" href="{{ metadata.author.linkedin }}">
     <link rel="me" href="{{ metadata.author.dribbble }}">
     <link rel="me" href="{{ metadata.author.github }}">
-    <script defer src="{{ metadata.url }}/js/css-doodle.min.js"></script>
   </head>
   <body>
     <a href="#content" class="skip"><span>Skip to content</span></a>
-    <header id="header">
-      <div class="home"><a rel="me" href="{{ '/' | url }}">{{ metadata.brand }}</a></div>
-      <nav aria-label="Site sections">
-        {% set navPages = collections.all | eleventyNavigation %}
-        <ul class="plain-list">
-        {%- for entry in navPages %}
-          <li{% if entry.url == page.url %} class="active"{% endif %}>
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-        </ul>
-      </nav>
-    </header>
-
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content">
-      {{ content | safe }}
-    </main>
-
-    <footer id="footer">
-      <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
-    </footer>
-    <div class="footer-decoration">
-      <css-doodle>
-        <style>
-          @grid: 32 / 100vmax;
-          @size: 1px calc(141.4% + 1px);
-          transform: rotate(@p(±45deg));
-          background: rgba(170, 134, 248, .25);
-          margin: auto;
-        </style>
-      </css-doodle>
+    <div class="main-wrapper">
+      <div class="width-wrapper">
+        <header>
+          <div class="brand">
+            <a rel="me" href="{{ '/' | url }}" title="Home">
+              <img class="" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
+            </a>
+          </div>
+          <nav aria-label="Site sections">
+            {% set navPages = collections.all | eleventyNavigation %}
+            <ul>
+            {%- for entry in navPages %}
+              <li{% if entry.url == page.url %} class="active"{% endif %}>
+                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+              </li>
+            {%- endfor %}
+            </ul>
+          </nav>
+        </header>
+        <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content">
+          {{ content | safe }}
+        </main>
+      </div>
     </div>
+    <footer role="contentinfo">
+      <div class="width-wrapper">
+        <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
+      </div>
+    </footer>
   </body>
 </html>
