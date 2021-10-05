@@ -2,33 +2,31 @@
 layout: base.njk
 ---
 
-<section>
-  <section id="intro" class="grid-section glowing">
-    <div>
-      <h1>Hey! How's it goin'?</h1>
-      <h2>I'm a designer / developer who specializes in web apps &amp; design systems.</h2>
-      <p>I'm currently seeking a new Product Designer or UI Engineer role with a team that's doing meaningful work. If that's you, <a href="/contact">get in touch</a>! 👋</p>
-    </div>
-    <div class="rounded">
-      <img src="{{ metadata.url }}/img/headshot.jpg" alt="Photo of me standing next to a framed Patrick Nagel print titled The Book" loading="lazy" />
-    </div>
-  </section>
+<section id="intro" class="grid-section glowing" aria-label="Welcome message">
+  <div>
+    <h1>Hey! How's it goin'?</h1>
+    <h2>I'm Dez, a designer / developer who specializes in web apps &amp; design systems.</h2>
+    <p>I'm currently seeking a new Product Designer or UI Engineer role with a team that's doing meaningful work. If that's you, <a href="/contact">get in touch</a>! 👋</p>
+  </div>
+  <div class="rounded">
+    <img src="{{ metadata.url }}/img/headshot.jpg" alt="Photo of me standing next to a framed Patrick Nagel print titled The Book" loading="lazy" />
+  </div>
+</section>
 
-  <section id="projects">
-    <h3>Latest projects</h3>
-    {% set projectlist = cms.allProjects | limit(3) %}
-    {% include 'projectlist.njk' %}
-    <div class="arrow-wrapper">
-      <a href="/projects" class="directional-arrow right">See all projects</a>
-    </div>
-  </section>
+<section id="projects" aria-label="Latest projects">
+  <h3>Latest projects</h3>
+  {% set projectlist = cms.allProjects | limit(3) %}
+  {% include 'projectlist.njk' %}
+  <div class="arrow-wrapper">
+    <a href="/projects" class="directional-arrow right">See all projects</a>
+  </div>
+</section>
 
-  <section id="posts">
-    <h3>Latest posts</h3>
-    {% set postlist = cms.allPosts | limit(3) %}
-    {% include 'postlist.njk' %}
-    <div class="arrow-wrapper">
-      <a href="/posts" class="directional-arrow right">See all posts</a>
-    </div>
-  </section>
+<section id="posts" aria-label="Latest blog posts">
+  <h3>Latest posts</h3>
+  {% set postlist = cms.allPosts | limit(3) %}
+  {% include 'postlist.njk' %}
+  <div class="arrow-wrapper">
+    <a href="/posts" class="directional-arrow right">See all posts</a>
+  </div>
 </section>
