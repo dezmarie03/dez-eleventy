@@ -89,14 +89,14 @@ header {
 
   ul {
     display: flex;
-    gap: 1rem;
     list-style: none;
     margin: 1rem 0;
     padding: 0;
   }
 
-  li {
+  li:not(:first-child) {
     margin-bottom: 0;
+    margin-left: 1rem;
   }
 
   .active a {
@@ -290,13 +290,13 @@ main a {
 
 .grid {
   display: flex;
-  gap: 4rem;
   flex-direction: column;
-  margin: 2rem 0 1rem;
+  margin: 2rem -0.5rem 1rem;
 }
 
-.post-list-item {
+.postlist-item {
   min-height: 100%;
+  margin: 0.5rem 0.5rem 2rem;
 }
 
 .postlist-link {
