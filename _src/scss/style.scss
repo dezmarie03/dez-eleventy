@@ -105,7 +105,12 @@ header {
     margin-left: 1rem;
   }
 
+  a {
+    color: var(--color-body);
+  }
+
   .active a {
+    font-weight: bold;
     border-bottom: 2px solid var(--color-link-underline);
   }
 }
@@ -249,8 +254,8 @@ small,
       display: inline-block;
       width: 0.4em;
       height: 0.4em;
-      border-right: 0.125rem solid var(--color-link);
-      border-top: 0.125rem solid var(--color-link);
+      border-right: 0.125rem solid var(--color-link-underline);
+      border-top: 0.125rem solid var(--color-link-underline);
       transform: rotate(45deg);
       margin-left: 0.25rem;
     }
@@ -290,8 +295,13 @@ small,
   }
 }
 
-main a {
-  border-bottom: 1px solid var(--color-link-underline);
+main a:not(.postlist-link):not(.directional-arrow) {
+  font-weight: bold;
+  color: var(--color-body);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color-link-underline);
+  text-underline-offset: 0.45em;
 }
 
 .grid {
