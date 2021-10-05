@@ -241,6 +241,11 @@ small,
   font-size: 0.8rem;
 }
 
+.arrow-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
 .directional-arrow {
   display: inline-block;
 
@@ -302,17 +307,25 @@ main p a:not(.directional-arrow) {
   text-decoration-style: wavy;
   text-decoration-color: var(--color-link-underline);
   text-underline-offset: 0.45em;
+
+  &:hover {
+    text-decoration-color: var(--color-link);
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  margin: 2rem -0.5rem 1rem;
+  margin: 2rem -2.5rem 1rem;
 }
 
 .postlist-item {
   min-height: 100%;
-  margin: 0.5rem 0.5rem 2rem;
+  margin: 0.5rem 2.5rem 2rem;
 }
 
 .postlist-link {

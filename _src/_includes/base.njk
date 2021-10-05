@@ -35,33 +35,33 @@
   <body>
     <div class="main-wrapper">
       <a href="#content" class="skip"><span>Skip to content</span></a>
-          <div class="width-wrapper">
-            <header>
-              <div class="brand">
-                <a rel="me" href="{{ '/' | url }}" title="Home">
-                  <img class="" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
-                </a>
-              </div>
-              <nav aria-label="Site sections">
-                {% set navPages = collections.all | eleventyNavigation %}
-                <ul>
-                {%- for entry in navPages %}
-                  <li{% if entry.url == page.url %} class="active"{% endif %}>
-                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                  </li>
-                {%- endfor %}
-                </ul>
-              </nav>
-            </header>
-            <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content">
-              {{ content | safe }}
-            </main>
+      <div class="width-wrapper">
+        <header>
+          <div class="brand">
+            <a rel="me" href="{{ '/' | url }}" title="Home">
+              <img class="" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
+            </a>
           </div>
-          <footer role="contentinfo">
-            <div class="width-wrapper">
-              <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
-            </div>
-          </footer>
+          <nav aria-label="Site sections">
+            {% set navPages = collections.all | eleventyNavigation %}
+            <ul>
+            {%- for entry in navPages %}
+              <li{% if entry.url == page.url %} class="active"{% endif %}>
+                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+              </li>
+            {%- endfor %}
+            </ul>
+          </nav>
+        </header>
+        <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content">
+          {{ content | safe }}
+        </main>
+      </div>
+      <footer role="contentinfo">
+        <div class="width-wrapper">
+          <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
