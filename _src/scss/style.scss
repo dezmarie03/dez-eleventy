@@ -407,9 +407,10 @@ pre {
   overflow: auto;
   overflow-x: scroll;
   overflow-wrap: normal;
+  margin-bottom: 3rem;
   padding: 2rem;
+  border-radius: 12px;
   background-color: white;
-  margin-bottom: 1rem;
 }
 
 .visually-hidden {
