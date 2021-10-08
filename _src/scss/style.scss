@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 100%; // 16px
+  font-size: 110%; // 18px
 }
 
 body {
@@ -376,7 +376,6 @@ main a:not(.directional-arrow):not(.postlist-link) {
   .grid-section {
     flex-direction: row;
     gap: 4rem;
-    align-items: center;
 
     div:first-child {
       flex: 1;
@@ -389,8 +388,8 @@ main a:not(.directional-arrow):not(.postlist-link) {
   }
 
   .rounded {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 200px;
+    max-height: 200px;
   }
 
   .grid {
@@ -398,8 +397,15 @@ main a:not(.directional-arrow):not(.postlist-link) {
     flex-wrap: wrap;
 
     li {
-      flex-basis: 36ch;
+      flex-basis: 32ch;
     }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .rounded {
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
