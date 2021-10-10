@@ -10,10 +10,16 @@ eleventyComputed:
   description: "{{ post.seoMeta.description | safe }}"
 ---
 
-# {{ post.title }}
+<div class="masthead">
 
-{% if post.description %}## {{ post.description }}{% endif %}
+# {{ post.title }}
 
 Published {{ post.date | readableDate }}
 
+</div>
+
+<div class="readable">
+
 {{ post.body | safe }}
+
+</div>
