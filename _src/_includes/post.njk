@@ -6,3 +6,16 @@ templateClass: tmpl-post
 <article class="readable">
   {{ content | safe }}
 </article>
+
+<script type="text/javascript">
+  (function () {
+    let readingProgressBar = document.createElement('div');
+    readingProgressBar.id = 'progress';
+    document.body.appendChild(readingProgressBar);
+
+    window.addEventListener('scroll', () => {
+      let max = document.body.scrollHeight - innerHeight;
+      readingProgressBar.style.width = `${(pageYOffset / max) * 100}%`;
+    });
+  }());
+</script>
