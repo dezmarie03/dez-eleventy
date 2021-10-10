@@ -309,7 +309,7 @@ header {
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: var(--space-xs);
-    justify-content: start;
+    justify-content: flex-start;
     list-style: none;
     margin: var(--space-xs) 0;
     padding: 0;
@@ -330,14 +330,14 @@ header {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   header {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
 
     ul {
-      justify-content: end;
+      justify-content: flex-end;
     }
   }
 }
@@ -482,7 +482,7 @@ strong,
 // Read more links
 .arrow-wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .directional-arrow {
@@ -550,13 +550,13 @@ main a:not(.directional-arrow):not(.grid-item-link) {
   margin: 0 calc(var(--space-m-l) * -1);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
