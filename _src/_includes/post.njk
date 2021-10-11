@@ -9,13 +9,18 @@ templateClass: tmpl-post
 
 <script type="text/javascript">
   (function () {
+    let timeout;
     let readingProgressBar = document.createElement('div');
     readingProgressBar.id = 'progress';
     document.body.appendChild(readingProgressBar);
+    let max = document.body.scrollHeight - innerHeight;
+    readingProgressBar.style.width = `${(pageYOffset / max) * 100}%`;
 
     window.addEventListener('scroll', () => {
-      let max = document.body.scrollHeight - innerHeight;
-      readingProgressBar.style.width = `${(pageYOffset / max) * 100}%`;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        readingProgressBar.style.width = `${(pageYOffset / max) * 100}%`;
+      }, 200);
     });
   }());
 </script>

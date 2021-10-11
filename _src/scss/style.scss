@@ -187,14 +187,17 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
+html {
+  overscroll-behavior: none;
   box-sizing: border-box;
 }
 
-html {
-  overscroll-behavior: none;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -466,12 +469,14 @@ article {
   overflow: hidden;
   width: 0;
   height: 5px;
+  will-change: width;
   background-image: linear-gradient(
     45deg,
     var(--color-note) 50%,
     var(--color-link-underline) 100%
   );
-  transition: all 2s linear;
+  background-color: var(--color-note);
+  transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 strong,
