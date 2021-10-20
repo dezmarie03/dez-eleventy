@@ -10,23 +10,18 @@ eleventyComputed:
   description: "{{ project.seoMeta.description | safe }}"
 ---
 
-<div class="masthead">
+<div class="project__masthead">
 
 # {{ project.title }}
 
-## {{ project.seoMeta.description }}
-
 </div>
 
-<div class="readable">
-  <div class="project-cover">
-    <picture>
-      <source media="(min-width: 18em)" srcset="{{ project.coverImg.responsiveImage.srcSet }}">
-      <img src="{{ project.coverImg.responsiveImage.src }} " alt="{{ project.coverImg.alt }}" style="width: auto;" lazy="true">
-    </picture>
-  </div>
+<div class="project__details">
 
 {{ project.roleResponsibilities | safe }}
+
+</div>
+<div class="project__body">
 
 {{ project.body | safe }}
 

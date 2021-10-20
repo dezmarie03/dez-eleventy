@@ -3,7 +3,7 @@
     <li class="grid-item">
       <a href="/projects/{{ project.slug }}" class="grid-item-link">
         <div>
-          <div class="grid-item-image" style="background-color: {{ project.coverImg.responsiveImage.bgColor }};">
+          <div class="grid-item-image">
             <picture>
               <source srcset="{{ project.coverImg.responsiveImage.srcSet }}">
               <img src="{{ project.coverImg.responsiveImage.src }} " alt="{{ project.coverImg.alt }}" lazy="true">

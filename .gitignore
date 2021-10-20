@@ -106,3 +106,4 @@ production.env
 .DS_Store
 _src/_data/cms.11tydata.json
 _site/
+package-lock.json

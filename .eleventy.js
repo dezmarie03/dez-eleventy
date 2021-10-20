@@ -3,8 +3,9 @@ const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventySass = require("eleventy-plugin-sass");
 const eleventyInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const eleventyMarkdownIt = require("markdown-it");
+const eleventyMarkdownItFigures = require("markdown-it-implicit-figures");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Enable deep merge for eleventyComputed
   eleventyConfig.setDataDeepMerge(true);
 
@@ -25,7 +26,10 @@ module.exports = function(eleventyConfig) {
     linkify: true
   };
 
-  eleventyConfig.setLibrary("md", eleventyMarkdownIt(markdownItOptions));
+  let markdownLib = eleventyMarkdownIt(markdownItOptions)
+    .use(eleventyMarkdownItFigures);
+
+  eleventyConfig.setLibrary("md", markdownLib);
 
   // Filter for readable post date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
