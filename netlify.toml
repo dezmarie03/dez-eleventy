@@ -1,5 +1,5 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; img-src 'self' www.datocms-assets.com; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; script-src 'unsafe-inline'"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' www.datocms-assets.com; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com;"
     X-Content-Type-Options = "nosniff"
