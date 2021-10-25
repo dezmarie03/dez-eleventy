@@ -15,7 +15,7 @@
   },
   "images": {
     "social_card_img": "dez_beberniss_social_card.png",
-    "apple-touch-icon": "180x180_icon.png",
+    "apple_touch_icon": "180x180_icon.png",
     "32x32_icon": "32x32_icon.png",
     "16x16_icon": "16x16_icon.png",
     "favicon": "favicon.ico"
