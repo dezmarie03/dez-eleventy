@@ -3,10 +3,10 @@
     <li class="grid-item">
       <a href="/posts/{{ post.slug }}" class="grid-item-link">
         <div>
-          <div class="grid-item-image" style="background-color: {{ post.coverImg.responsiveImage.bgColor }};">
+          <div class="grid-item-image">
             <picture>
               <source srcset="{{ post.coverImg.responsiveImage.srcSet }}">
-              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" style="width: auto;" lazy="true">
+              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" lazy="true">
             </picture>
           </div>
           <div class="grid-item-description">

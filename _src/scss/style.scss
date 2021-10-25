@@ -398,6 +398,10 @@ article {
   }
 }
 
+.grid-item-image img {
+  width: auto;
+}
+
 @media screen and (min-width: 700px) {
   .photo-section .text-content {
     grid-row: 1;
