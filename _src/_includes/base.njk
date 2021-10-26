@@ -8,19 +8,12 @@
     <meta name="generator" content="{{ site.generator }}" />
     <meta name="title" content="{{ title or metadata.title | safe }}" />
     <meta name="description" content="{{ description or metadata.description }}" />
-    <meta name="pinterest" content="nopin" />
-    <meta name="author" content="{{ metadata.author.name }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
-    {% set css %}
-      {% include "critical.css" %}
-    {% endset %}
-    <style type="text/css">
-      {{ css | cssmin | safe }}
-    </style>
     <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+    <meta name="pinterest" content="nopin" />
+    <meta name="author" content="{{ metadata.author.name }}" />
     <meta property="og:title" content="{{ title or metadata.title | safe }}" />
     <meta property="og:description" content="{{ description or metadata.description }}" />
     <meta property="og:site_name" content="{{ title or metadata.title | safe }}" />
@@ -40,22 +33,23 @@
     <link rel="me" href="{{ metadata.author.linkedin }}">
     <link rel="me" href="{{ metadata.author.dribbble }}">
     <link rel="me" href="{{ metadata.author.github }}">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      <a href="#content" class="link--focus-only">Skip to content</</a>
-      <div class="container">
-        <header class="grid" aria-label="Main navigation">
+    <div class="main-wrapper">
+      <a href="#content" class="skip"><span>Skip to content</span></a>
+      <div class="width-wrapper">
+        <header aria-label="Main navigation">
           <div class="brand">
             <a rel="me" href="{{ '/' | url }}" title="Home">
-              <img alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
+              <img class="" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
             </a>
           </div>
           <nav>
             {% set navPages = collections.all | eleventyNavigation %}
-            <ul class="grid list--plain">
+            <ul>
             {%- for entry in navPages %}
-              <li{% if entry.url in page.url %} class="grid__item active strong"{% endif %}>
+              <li{% if entry.url in page.url %} class="active"{% endif %}>
                 <a href="{{ entry.url | url }}">{{ entry.title }}</a>
               </li>
             {%- endfor %}
@@ -67,7 +61,7 @@
         </main>
       </div>
       <footer role="contentinfo" aria-label="Copyright info">
-        <div class="container">
+        <div class="width-wrapper">
           <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
         </div>
       </footer>

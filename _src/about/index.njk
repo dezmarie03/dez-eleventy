@@ -10,8 +10,8 @@ eleventyNavigation:
 
 <h1>{{ title }}</h1>
 
-<section id="intro" class="grid grid--2-1">
-  <div class="grid__item--2">
+<section class="photo-section">
+  <div class="text-content">
     <p>My friends call me Dez, and I'm based in the San Francisco Bay Area. Since 2010, I've been working in a mix of product design and front-end development at technology companies like Airkit, OneSignal, WP Engine, and Bazaarvoice.</p>
 
     <p>Right now I'm actively looking for opportunities in either Product Design or as a UI/UX developer. For a complete breakdown of my work experience, see <a href="{{ metadata.author.linkedin }}" rel="noopener" target="_blank">my LinkedIn profile</a>.</p>
@@ -20,7 +20,7 @@ eleventyNavigation:
 
     <p>To see more of what I’ve been up to, <a href="{{ metadata.author.instagram }}" rel="noopener" target="_blank">follow me on Instagram</a>.</p>
   </div>
-  <div class="grid__item--1 wrapper--rounded">
-    <img src="/img/headshot2.jpg" alt="Photo of me sitting at my computer desk" loading="lazy" />
+  <div class="photo-content rounded">
+    <img src="{{ metadata.url }}/img/headshot2.jpg" alt="Photo of me sitting at my computer desk" loading="lazy" />
   </div>
 </section>

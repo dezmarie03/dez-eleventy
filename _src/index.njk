@@ -2,13 +2,13 @@
 layout: base.njk
 ---
 
-<section id="intro" class="grid grid--2-1 glowing" aria-label="Welcome message">
-  <div class="grid__item--2">
+<section id="intro" class="photo-section glowing" aria-label="Welcome message">
+  <div class="text-content">
     <h1>Hey! How's it goin'?</h1>
     <p class="step-4"><strong>I'm Dez, a designer / developer who specializes in web apps &amp; design systems.</strong> I'm currently seeking a new Product Designer or UI Engineer role with a team that's doing meaningful work. If that's you, <a href="/contact">get in touch</a>! 👋</p>
   </div>
-  <div class="grid__item--1 wrapper--rounded">
-    <img src="/img/headshot.jpg" alt="Photo of me standing next to a framed Patrick Nagel print titled The Book" loading="lazy" />
+  <div class="photo-content rounded">
+    <img src="{{ metadata.url }}/img/headshot.jpg" alt="Photo of me standing next to a framed Patrick Nagel print titled The Book" loading="lazy" />
   </div>
 </section>
 
@@ -16,8 +16,8 @@ layout: base.njk
   <h3>Latest projects</h3>
   {% set projectlist = cms.allProjects | limit(3) %}
   {% include 'projectlist.njk' %}
-  <div class="flex flex--end">
-    <a href="/projects" class="link__arrow link__arrow--right">See all projects</a>
+  <div class="arrow-wrapper">
+    <a href="/projects" class="directional-arrow right">See all projects</a>
   </div>
 </section>
 
@@ -25,7 +25,7 @@ layout: base.njk
   <h3>Latest posts</h3>
   {% set postlist = cms.allPosts | limit(3) %}
   {% include 'postlist.njk' %}
-  <div class="flex flex--end">
-    <a href="/posts" class="link__arrow link__arrow--right">See all posts</a>
+  <div class="arrow-wrapper">
+    <a href="/posts" class="directional-arrow right">See all posts</a>
   </div>
 </section>
