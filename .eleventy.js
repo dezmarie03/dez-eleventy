@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventySass = require("eleventy-plugin-sass");
+const eleventyCleanCSS = require("clean-css");
 const eleventyInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const eleventyMarkdownIt = require("markdown-it");
 const eleventyMarkdownItFigures = require("markdown-it-implicit-figures");
@@ -46,6 +47,11 @@ module.exports = function (eleventyConfig) {
   // Filter to limit items in a collection loop
   eleventyConfig.addNunjucksFilter("limit", (arr, limit) => {
     return arr.slice(0, limit);
+  });
+
+  // Filter to minimize CSS for inlining
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new eleventyCleanCSS({}).minify(code).styles;
   });
 
   // Copy _src/img folder to _site/img

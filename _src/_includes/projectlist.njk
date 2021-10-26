@@ -1,15 +1,15 @@
 {% for project in projectlist %}
-  {% if loop.first %}<ul class="plain-list grid">{% endif %}
-    <li class="grid-item">
-      <a href="/projects/{{ project.slug }}" class="grid-item-link">
-        <div>
-          <div class="grid-item-image">
+  {% if loop.first %}<ul class="list--plain grid grid--3">{% endif %}
+    <li class="grid__item">
+      <a href="/projects/{{ project.slug }}" class="grid__item__link">
+        <div class="grid__item__content">
+          <div class="grid__item__image">
             <picture>
               <source srcset="{{ project.coverImg.responsiveImage.srcSet }}">
               <img src="{{ project.coverImg.responsiveImage.src }} " alt="{{ project.coverImg.alt }}" lazy="true">
             </picture>
           </div>
-          <div class="grid-item-description">
+          <div class="grid__item__description">
             <h5>{{ project.title }}</h5>
             <p>{{ project.seoMeta.description }}</p>
           </div>

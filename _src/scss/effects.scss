@@ -1,0 +1,58 @@
+.glowing:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 440px;
+  height: 440px;
+  border-radius: 15rem;
+  background: radial-gradient(
+      105.68% 45.69% at 92.95% 50%,
+      rgba(105, 244, 253, 0.5) 0%,
+      rgba(160, 255, 244, 0.095) 53.91%,
+      rgba(254, 216, 255, 0) 100%
+    ),
+    radial-gradient(
+      103.18% 103.18% at 90.11% 102.39%,
+      #c9fff2 0%,
+      rgba(230, 255, 250, 0) 100%
+    ),
+    radial-gradient(
+      90.45% 90.45% at 87.84% 9.55%,
+      #ffd2f5 0%,
+      rgba(254, 219, 246, 0) 100%
+    ),
+    linear-gradient(
+      135.66deg,
+      rgba(203, 185, 255, 0.8) 14.89%,
+      rgba(216, 202, 254, 0) 74.33%
+    );
+  background-blend-mode: normal, normal, normal, normal, normal, normal;
+  filter: blur(50px);
+}
+
+.link__arrow:after {
+  position: relative;
+  top: -0.125rem;
+  right: var(--space-3xs);
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  transform: rotate(45deg);
+  margin-left: var(--space-2xs);
+  border-right: 0.125rem solid var(--color-link-underline);
+  border-top: 0.125rem solid var(--color-link-underline);
+}
+
+#progress {
+  will-change: width;
+  background-image: linear-gradient(
+    45deg,
+    var(--color-note) 50%,
+    var(--color-link-underline) 100%
+  );
+  background-color: var(--color-note);
+  transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
