@@ -65,6 +65,9 @@ module.exports = function (eleventyConfig) {
   // Copy _src/js folder to _site/js
   eleventyConfig.addPassthroughCopy("_src/js");
 
+  // Copy _src/webfonts folder to _site/webfonts
+  eleventyConfig.addPassthroughCopy("_src/webfonts");
+
   return {
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: "njk",
