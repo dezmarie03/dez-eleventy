@@ -1,7 +1,7 @@
 query MyQuery {
   home {
     image {
-      responsiveImage(imgixParams: { fm: jpg }) {
+      responsiveImage(imgixParams: { fm: jpg, q: 60, fit: max, w: 500 }) {
         srcSet
         webpSrcSet
         src
@@ -33,7 +33,7 @@ query MyQuery {
       }
     }
     coverImg {
-      responsiveImage(imgixParams: { fm: jpg }) {
+      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
         srcSet
         webpSrcSet
         src
@@ -71,7 +71,7 @@ query MyQuery {
       }
     }
     coverImg {
-      responsiveImage(imgixParams: { fm: jpg }) {
+      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
         srcSet
         webpSrcSet
         src
