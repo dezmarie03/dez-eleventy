@@ -16,12 +16,16 @@ query MyQuery {
       }
     }
     coverImg {
-      alt
-      url
-      responsiveImage {
+      responsiveImage(imgixParams: { fm: jpg }) {
         srcSet
+        webpSrcSet
         src
+        width
+        height
+        aspectRatio
+        alt
         bgColor
+        base64
       }
     }
     tags
@@ -50,14 +54,17 @@ query MyQuery {
       }
     }
     coverImg {
-      alt
-      url
-      responsiveImage {
+      responsiveImage(imgixParams: { fm: jpg }) {
         srcSet
+        webpSrcSet
         src
+        width
+        height
+        aspectRatio
+        alt
         bgColor
+        base64
       }
     }
-    tags
   }
 }

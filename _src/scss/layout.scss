@@ -60,6 +60,10 @@ header {
   }
 }
 
+.grid__item__image {
+  background-color: var(--color-background);
+}
+
 .grid__item__description {
   padding: var(--space-s);
 }

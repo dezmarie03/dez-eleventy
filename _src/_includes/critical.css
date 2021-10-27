@@ -142,6 +142,17 @@ header .grid__item {
   margin: 0;
 }
 
+.grid__item__image {
+  position: relative;
+}
+
+.grid__item__image picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 .grid__item__image img {
   width: auto;
 }

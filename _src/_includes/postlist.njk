@@ -3,10 +3,11 @@
     <li class="grid__item">
       <a href="/posts/{{ post.slug }}" class="grid__item__link">
         <div class="grid__item__content">
-          <div class="grid__item__image">
+          <div class="grid__item__image" style="background-image: url({{ post.coverImg.responsiveImage.base64 }}); background-size: cover; padding-top: {{ 100.0 / post.coverImg.responsiveImage.aspectRatio }}%;">
             <picture>
+              <source srcset="{{ post.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
               <source srcset="{{ post.coverImg.responsiveImage.srcSet }}">
-              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" lazy="true">
+              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" loading="lazy">
             </picture>
           </div>
           <div class="grid__item__description">
