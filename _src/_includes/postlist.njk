@@ -7,7 +7,7 @@
             <picture>
               <source srcset="{{ post.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
               <source srcset="{{ post.coverImg.responsiveImage.srcSet }}">
-              <img src="{{ post.coverImg.responsiveImage.src }} " alt="{{ post.coverImg.alt }}" loading="lazy">
+              <img src="{{ post.coverImg.responsiveImage.src }}" alt="{{ post.coverImg.responsiveImage.alt }}" width="{{ post.coverImg.responsiveImage.width }}" height="{{ post.coverImg.responsiveImage.height }}" loading="lazy">
             </picture>
           </div>
           <div class="grid__item__description">
