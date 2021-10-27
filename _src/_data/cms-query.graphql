@@ -1,4 +1,21 @@
 query MyQuery {
+  home {
+    image {
+      responsiveImage(imgixParams: { fm: jpg }) {
+        srcSet
+        webpSrcSet
+        src
+        width
+        height
+        aspectRatio
+        alt
+        bgColor
+        base64
+      }
+    }
+    intro
+    title
+  }
   allPosts(
     first: "100"
     skip: "0"

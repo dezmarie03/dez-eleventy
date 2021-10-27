@@ -54,6 +54,11 @@ module.exports = function (eleventyConfig) {
     return new eleventyCleanCSS({}).minify(code).styles;
   });
 
+  // Shortcode to render Markdown in Nunjucks
+  eleventyConfig.addNunjucksShortcode("markdown", function (content) {
+    return `${markdownLib.render(content)}`;
+  });
+
   // Copy _src/img folder to _site/img
   eleventyConfig.addPassthroughCopy("_src/img");
 

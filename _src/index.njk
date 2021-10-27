@@ -2,13 +2,18 @@
 layout: base.njk
 ---
 
+{% set home = cms.home %}
 <section id="intro" class="grid grid--2-1 glowing" aria-label="Welcome message">
-  <div class="grid__item--2">
-    <h1>Hey! How's it goin'?</h1>
-    <p class="step-4"><strong>I'm Dez, a designer / developer who specializes in web apps &amp; design systems.</strong> I'm currently seeking a new Product Designer or UI Engineer role with a team that's doing meaningful work. If that's you, <a href="/contact">get in touch</a>! 👋</p>
+  <div class="grid__item grid__item--2">
+    {% set intro %}{% include './home/intro.md' %}{% endset %}
+    {% markdown intro %}
   </div>
-  <div class="grid__item--1 wrapper--rounded">
-    <img src="/img/headshot.jpg" alt="Photo of me standing next to a framed Patrick Nagel print titled The Book" loading="lazy" />
+  <div class="grid__item grid__item--1 wrapper--rounded">
+    <picture>
+      <source srcset="{{ home.image.responsiveImage.webpSrcSet }}" type="image/webp">
+      <source srcset="{{ home.image.responsiveImage.srcSet }}">
+      <img src="{{ home.image.responsiveImage.src }}" alt="{{ home.image.responsiveImage.alt }}" width="{{ home.image.responsiveImage.width }}" height="{{ home.image.responsiveImage.height }}" loading="lazy">
+    </picture>
   </div>
 </section>
 
