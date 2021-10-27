@@ -1,6 +1,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; img-src 'self' www.datocms-assets.com; style-src 'self' 'unsafe-inline';"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data www.datocms-assets.com; style-src 'unsafe-inline';"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
