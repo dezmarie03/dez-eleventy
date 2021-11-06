@@ -16,13 +16,15 @@ eleventyComputed:
 
 </div>
 
-<div class="project__details">
+<div class="grid grid--aside">
+<aside class="project__details">
 
 {{ project.roleResponsibilities | safe }}
 
-</div>
+</aside>
 <div class="project__body">
 
 {{ project.body | safe }}
 
+</div>
 </div>
