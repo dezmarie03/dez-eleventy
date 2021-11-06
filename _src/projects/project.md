@@ -24,6 +24,13 @@ eleventyComputed:
 </aside>
 <div class="project__body">
 
+<picture>
+<source srcset="{{ project.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
+<source srcset="{{ project.coverImg.responsiveImage.srcSet }}">
+<img src="{{ project.coverImg.responsiveImage.src }}" alt="{{ project.coverImg.responsiveImage.alt }}" width="{{ project.coverImg.responsiveImage.width }}" height="{{ project.coverImg.responsiveImage.height }}" loading="lazy">
+</picture>
+<br /><br />
+
 {{ project.body | safe }}
 
 </div>
