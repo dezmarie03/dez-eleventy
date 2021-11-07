@@ -16,6 +16,23 @@ query MyQuery {
     intro
     title
   }
+  about {
+    image {
+      responsiveImage(imgixParams: { fm: jpg, q: 60, fit: max, w: 500 }) {
+        srcSet
+        webpSrcSet
+        src
+        width
+        height
+        aspectRatio
+        alt
+        bgColor
+        base64
+      }
+    }
+    intro
+    title
+  }
   allPosts(
     first: "100"
     skip: "0"
