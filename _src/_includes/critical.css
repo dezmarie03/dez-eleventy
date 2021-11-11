@@ -274,8 +274,8 @@ header .grid__item {
   }
 
   .slider__navigation button {
-    top: 40%;
-    transform: translateY(-40%);
+    top: 45%;
+    transform: translateY(-45%);
   }
 }
 
