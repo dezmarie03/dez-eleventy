@@ -234,6 +234,10 @@ header .grid__item {
   margin: 0 auto;
 }
 
+.slider__tabs li {
+  margin: 0;
+}
+
 .slider__tab {
   display: flex;
   white-space: nowrap;
