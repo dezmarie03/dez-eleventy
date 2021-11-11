@@ -35,6 +35,16 @@ article {
   }
 }
 
+.grid--aside {
+  margin: var(--space-xl) 0;
+
+  aside {
+    background-color: var(--color-code);
+    padding: var(--space-m);
+    order: 2;
+  }
+}
+
 header {
   .grid {
     margin: var(--space-xs) 0;
@@ -67,8 +77,34 @@ header {
   padding: var(--space-s);
 }
 
+.project__cover picture {
+  width: 100%;
+  height: 100%;
+
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.project__body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 700px) {
   .grid__item--2 {
     padding-right: var(--space-2xl);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .grid--aside {
+    grid-template-columns: 1fr calc(var(--space-3xl) * 3);
+  }
+
+  .grid--aside aside {
+    padding: var(--space-m);
   }
 }

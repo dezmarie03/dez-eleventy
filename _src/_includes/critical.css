@@ -310,15 +310,6 @@ header .grid__item {
   .grid__item--1 {
     grid-column: col-start 9 / span 4;
   }
-
-  .grid--aside {
-    grid-template-columns: 1fr 245px;
-    grid-column-gap: 3rem;
-  }
-
-  .grid--aside aside {
-    order: 2;
-  }
 }
 
 @media screen and (min-width: 1000px) {
