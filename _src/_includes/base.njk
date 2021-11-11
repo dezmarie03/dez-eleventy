@@ -38,7 +38,7 @@
     <link rel="me" href="{{ metadata.author.linkedin }}">
     <link rel="me" href="{{ metadata.author.dribbble }}">
     <link rel="me" href="{{ metadata.author.github }}">
-    <script src="/js/aos.min.js"></script>
+    <script defer src="{{ metadata.url }}/js/aos.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -71,8 +71,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      AOS.init();
-    </script>
+    <script type="text/javascript" src="{{ metadata.url }}/js/scripts.js"></script>
   </body>
 </html>
