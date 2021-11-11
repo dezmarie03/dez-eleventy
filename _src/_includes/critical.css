@@ -172,6 +172,93 @@ header .grid__item {
   overflow: hidden;
 }
 
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  grid-template-rows: 1fr auto;
+  row-gap: 1rem;
+  grid-template-areas:
+    "slider-panels"
+    "slider-filmstrip";
+}
+
+.slider__filmstrip {
+  grid-area: slider-filmstrip;
+  overflow-x: scroll;
+  overflow-y: visible;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+}
+
+.slider__navigation {
+  width: 100%;
+}
+
+.slider__navigation button {
+  position: absolute;
+  z-index: 3;
+  top: 30%;
+  transform: translateY(-30%);
+  appearance: none;
+  border: 0 none;
+  cursor: pointer;
+}
+
+.slider__navigation button:before {
+  position: relative;
+  transform: rotate(45deg);
+  content: "";
+  display: inline-block;
+}
+
+.slider__navigation #previous:before {
+  transform: rotate(-135deg);
+  left: 25%;
+}
+
+.slider__navigation #next {
+  right: 0;
+}
+
+.slider__navigation #next:before {
+  right: 25%;
+}
+
+.slider__tabs {
+  z-index: 2;
+  flex-wrap: nowrap;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slider__tab {
+  display: flex;
+  white-space: nowrap;
+  border-bottom: 0.125rem solid transparent;
+  opacity: 0.6;
+}
+
+.slider__tab:focus {
+  outline: none;
+  border-width: 0;
+}
+
+.slider__tab picture {
+  max-width: 6rem;
+  pointer-events: none;
+}
+
+.slider__panels {
+  grid-area: slider-panels;
+}
+
+.slider__panel picture {
+  width: 100%;
+}
+
 @media screen and (min-width: 600px) {
   header {
     align-items: center;
@@ -180,6 +267,11 @@ header .grid__item {
 
   header .grid {
     justify-content: end;
+  }
+
+  .slider__navigation button {
+    top: 40%;
+    transform: translateY(-40%);
   }
 }
 

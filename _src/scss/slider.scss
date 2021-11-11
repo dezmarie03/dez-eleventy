@@ -1,0 +1,18 @@
+.slider__navigation button {
+  padding: var(--space-2xs);
+  background-color: var(--color-link-underline);
+  color: var(--color-code);
+}
+
+.slider__navigation button:before {
+  width: var(--space-2xs);
+  height: var(--space-2xs);
+  border-right: 0.125rem solid var(--color-code);
+  border-top: 0.125rem solid var(--color-code);
+}
+
+.slider__tab--active,
+.slider__tab--active:focus {
+  opacity: 1;
+  border-bottom: 0.125rem solid var(--color-link-underline);
+}

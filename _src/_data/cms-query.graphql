@@ -44,6 +44,7 @@ query MyQuery {
     slug
     title
     seoMeta {
+      title
       description
       image {
         url
@@ -82,6 +83,7 @@ query MyQuery {
     title
     roleResponsibilities
     seoMeta {
+      title
       description
       image {
         url
@@ -99,6 +101,20 @@ query MyQuery {
         bgColor
         base64
       }
+    }
+    gallery {
+      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
+        srcSet
+        webpSrcSet
+        src
+        width
+        height
+        aspectRatio
+        alt
+        bgColor
+        base64
+      }
+      id
     }
   }
 }

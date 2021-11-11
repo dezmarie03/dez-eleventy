@@ -1,0 +1,29 @@
+<div id="slider" class="grid slider">
+  <ul aria-label="Next and previous item controls" class="slider__navigation">
+    <li class="previous">
+      <button id="previous" role="button"></button>
+    </li>
+    <li class="next">
+      <button id="next" role="button"></button>
+    </li>
+  </ul>
+  <div role="region" aria-label="Item list" tabindex="0" class="slider__filmstrip">
+    <ul class="slider__tabs flex" role="tablist">
+      <!-- Loop -->
+      {% for item in gallery %}
+      <li role="presentation">
+        <a id="item-1" href="#section-1" class="slider__tab" role="tab" title="Show item 1">
+          <img src="https://www.datocms-assets.com/37443/1634767392-valuevotingmobile.png" alt="" />
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="slider__panels">
+    {% for item in gallery %}
+    <section id="section-1" class="slider__panel">
+      <img src="https://www.datocms-assets.com/37443/1634767392-valuevotingmobile.png" alt="Item 1" />
+    </section>
+    {% endfor %}
+  </div>
+</div>

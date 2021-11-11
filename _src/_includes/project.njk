@@ -1,8 +1,70 @@
 ---
 layout: base.njk
 templateClass: tmpl-project
+pagination:
+  data: cms.allProjects
+  size: 1
+  alias: project
+permalink: "projects/{{ project.slug }}/"
 ---
 
 <article class="project">
-  {{ content | safe }}
+  <div class="project__masthead">
+    <h1>{{ project.title }}</h1>
+  </div>
+  <div class="grid grid--aside">
+    <aside class="project__details">
+      {% set role %}{% include '../projects/project-role.md' %}{% endset %}
+      {% markdown role %}
+    </aside>
+    <div class="project__body">
+      <div class="project__cover">
+        <picture>
+          <source srcset="{{ project.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
+          <source srcset="{{ project.coverImg.responsiveImage.srcSet }}">
+          <img src="{{ project.coverImg.responsiveImage.src }}" alt="{{ project.coverImg.responsiveImage.alt }}" width="{{ project.coverImg.responsiveImage.width }}" height="{{ project.coverImg.responsiveImage.height }}" loading="lazy">
+        </picture>
+      </div>
+      {{ content | safe }}
+      {% if project.gallery.length > 0 %}
+        <div id="slider" class="grid slider">
+          <ul aria-label="Next and previous item controls" class="slider__navigation flex list--plain">
+            <li class="previous">
+              <button id="previous" role="button"></button>
+            </li>
+            <li class="next">
+              <button id="next" role="button"></button>
+            </li>
+          </ul>
+          <div role="region" aria-label="Project image gallery" tabindex="0" class="slider__filmstrip">
+            <ul class="slider__tabs list--plain flex" role="tablist">
+              {% for item in project.gallery %}
+                <li role="presentation">
+                  <a id="item-{{ item.id }}" href="#section-{{ item.id }}" class="slider__tab" role="tab" title="Show full size image">
+                    <picture>
+                      <source srcset="{{ item.responsiveImage.webpSrcSet }}" type="image/webp">
+                      <source srcset="{{ item.responsiveImage.srcSet }}">
+                      <img src="{{ item.responsiveImage.src }}" alt="" width="{{ item.responsiveImage.width }}" height="{{ item.responsiveImage.height }}" loading="lazy">
+                    </picture>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="slider__panels">
+            {% for item in project.gallery %}
+              <section id="section-{{ item.id }}" class="slider__panel">
+                <picture>
+                  <source srcset="{{ item.responsiveImage.webpSrcSet }}" type="image/webp">
+                  <source srcset="{{ item.responsiveImage.srcSet }}">
+                  <img src="{{ item.responsiveImage.src }}" alt="{{ item.responsiveImage.alt }}" width="{{ item.responsiveImage.width }}" height="{{ item.responsiveImage.height }}" loading="lazy">
+                </picture>
+              </section>
+            {% endfor %}
+          </div>
+        </div>
+        <script src="/js/slider.js"></script>
+      {% endif %}
+    </div>
+  </div>
 </article>
