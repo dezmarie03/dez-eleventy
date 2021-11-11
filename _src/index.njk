@@ -12,13 +12,13 @@ layout: base.njk
     <picture>
       <source srcset="{{ home.image.responsiveImage.webpSrcSet }}" type="image/webp">
       <source srcset="{{ home.image.responsiveImage.srcSet }}">
-      <img src="{{ home.image.responsiveImage.src }}" alt="{{ home.image.responsiveImage.alt }}" width="{{ home.image.responsiveImage.width }}" height="{{ home.image.responsiveImage.height }}" loading="lazy">
+      <img src="{{ home.image.responsiveImage.src }}" alt="{{ home.image.responsiveImage.alt }}" width="{{ home.image.responsiveImage.width }}" height="{{ home.image.responsiveImage.height }}" data-aos="fade-in" loading="lazy">
     </picture>
   </div>
 </section>
 
 <section id="projects" aria-label="Latest projects">
-  <h3>Latest projects</h3>
+  <h3 data-aos="fade-in">Latest projects</h3>
   {% set projectlist = cms.allProjects | limit(3) %}
   {% include 'projectlist.njk' %}
   <div class="flex flex--end">
@@ -27,7 +27,7 @@ layout: base.njk
 </section>
 
 <section id="posts" aria-label="Latest blog posts">
-  <h3>Latest posts</h3>
+  <h3 data-aos="fade-in">Latest posts</h3>
   {% set postlist = cms.allPosts | limit(3) %}
   {% include 'postlist.njk' %}
   <div class="flex flex--end">

@@ -10,7 +10,7 @@ eleventyNavigation:
 
 {% set about = cms.about %}
 <section id="intro" class="grid grid--2-1">
-  <div class="grid__item--2">
+  <div class="grid__item--2" data-aos="fade-in">
     {% set intro %}{% include './intro.md' %}{% endset %}
     {% markdown intro %}
   </div>
@@ -18,7 +18,7 @@ eleventyNavigation:
     <picture>
       <source srcset="{{ about.image.responsiveImage.webpSrcSet }}" type="image/webp">
       <source srcset="{{ about.image.responsiveImage.srcSet }}">
-      <img src="{{ about.image.responsiveImage.src }}" alt="{{ about.image.responsiveImage.alt }}" width="{{ about.image.responsiveImage.width }}" height="{{ about.image.responsiveImage.height }}" loading="lazy">
+      <img src="{{ about.image.responsiveImage.src }}" alt="{{ about.image.responsiveImage.alt }}" width="{{ about.image.responsiveImage.width }}" height="{{ about.image.responsiveImage.height }}" data-aos="fade-in" loading="lazy">
     </picture>
   </div>
 </section>

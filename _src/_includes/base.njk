@@ -18,6 +18,7 @@
       {{ css | cssmin | safe }}
     </style>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/aos.min.css">
     <meta property="og:title" content="{{ title or metadata.title | safe }}" />
     <meta property="og:description" content="{{ description or metadata.description }}" />
     <meta property="og:site_name" content="{{ title or metadata.title | safe }}" />
@@ -37,6 +38,7 @@
     <link rel="me" href="{{ metadata.author.linkedin }}">
     <link rel="me" href="{{ metadata.author.dribbble }}">
     <link rel="me" href="{{ metadata.author.github }}">
+    <script src="/js/aos.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -64,10 +66,13 @@
         </main>
       </div>
       <footer role="contentinfo" aria-label="Copyright info">
-        <div class="container">
+        <div class="container text--centered">
           <p>&copy; {{ site.buildTime | year }} {{ metadata.author.name }}</p>
         </div>
       </footer>
     </div>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

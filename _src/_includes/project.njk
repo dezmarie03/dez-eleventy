@@ -9,10 +9,10 @@ permalink: "projects/{{ project.slug }}/"
 ---
 
 <article class="project">
-  <div class="project__masthead">
+  <div class="project__masthead text--centered" data-aos="fade-in">
     <h1>{{ project.title }}</h1>
   </div>
-  <div class="grid grid--aside">
+  <div class="grid grid--aside" data-aos="fade-in">
     <aside class="project__details">
       {% set role %}{% include '../projects/project-role.md' %}{% endset %}
       {% markdown role %}
@@ -25,11 +25,11 @@ permalink: "projects/{{ project.slug }}/"
       </picture>
     </div>
   </div>
-  <div class="project__body">
+  <div class="project__body" data-aos="fade-in">
     {{ content | safe }}
   </div>
   {% if project.gallery.length > 0 %}
-  <div id="slider" class="grid slider">
+  <div id="slider" class="grid slider" data-aos="fade-in">
     <ul aria-label="Next and previous item controls" class="slider__navigation flex list--plain">
       <li class="previous">
         <button id="previous" role="button"></button>
