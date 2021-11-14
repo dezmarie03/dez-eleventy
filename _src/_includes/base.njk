@@ -29,10 +29,10 @@
     <meta property="twitter:description" content="{{ description or metadata.description }}" />
     <meta property="twitter:url" content="{{ metadata.url }}{{ page.url }}" />
     <meta property="og:image" content="{{ metadata.url }}/img/{{ metadata.images.social_card_img }}" />
-    <link rel="apple-touch-icon" href="{{ metadata.url }}/img/{{ metadata.images.apple_touch_icon }}" sizes="180x180">
-    <link rel="icon" href="{{ metadata.url }}/img/{{ metadata.images.32x32_icon }}" sizes="32x32" type="image/png">
-    <link rel="icon" href="{{ metadata.url }}/img/{{ metadata.images.16x16_icon }}" sizes="16x16" type="image/png">
-    <link rel="shortcut icon" href="{{ metadata.url }}/img/{{ metadata.images.favicon }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/{{ metadata.images.apple_touch_icon }}" sizes="180x180">
+    <link rel="icon" href="/img/{{ metadata.images.32x32_icon }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="/img/{{ metadata.images.16x16_icon }}" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="/img/{{ metadata.images.favicon }}" type="image/x-icon">
     <link rel="me" href="mailto:dezmarie@gmail.com">
     <link rel="me" href="{{ metadata.author.twitter }}">
     <link rel="me" href="{{ metadata.author.linkedin }}">
@@ -70,6 +70,6 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="{{ metadata.url }}/js/scripts.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
   </body>
 </html>
