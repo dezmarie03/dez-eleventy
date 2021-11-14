@@ -65,10 +65,6 @@ query MyQuery {
     }
     tags
     date
-    relatedPosts {
-      slug
-      title
-    }
   }
   allProjects(
     first: "100"
