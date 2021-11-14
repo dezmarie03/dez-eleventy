@@ -78,6 +78,7 @@ query MyQuery {
     slug
     title
     roleResponsibilities
+    private
     seoMeta {
       title
       description
