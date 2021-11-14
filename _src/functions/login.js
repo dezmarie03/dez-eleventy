@@ -3,7 +3,6 @@ require("dotenv").config();
 
 exports.handler = async function (event, context) {
   const { password } = new URLSearchParams(event.body);
-  const { redirect } = new URLSearchParams(event.headers.referer.split('?')[1]);
 
   const endpoint = `${process.env.URL}/.netlify/identity/token`;
 
@@ -28,7 +27,7 @@ exports.handler = async function (event, context) {
       headers: {
         'Set-Cookie': `nf_jwt=${access_token}; Path=/; HttpOnly; Secure`,
         'Cache-Control': 'no-cache',
-        Location: redirect || '/projects/private',
+        Location: '/projects/private',
       },
     };
   } catch (error) {
