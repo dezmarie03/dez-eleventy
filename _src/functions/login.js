@@ -37,7 +37,7 @@ exports.handler = async function (event, context) {
       statusCode: 302,
       headers: {
         'Cache-Control': 'no-cache',
-        Location: `/login/?redirect=${encodeURIComponent(redirect)}`,
+        Location: `/login/`,
       },
     };
   }
