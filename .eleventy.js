@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   // Initialize Sass plugin
   eleventyConfig.addPlugin(eleventySass, {
     watch: ['_src/scss/**/*.scss'],
+    outputDir: '_site/css'
   });
 
   let markdownItOptions = {
