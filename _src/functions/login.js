@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {
   try {
     const response = await axios.post(endpoint, data, options);
     const access_token = response.data.access_token;
-    const privateUri = new RegExp(`/pvt-*/*`);
+    const privateUri = new RegExp(`/projects/pvt-*/*`);
 
     return {
       statusCode: 302,
