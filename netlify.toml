@@ -4,3 +4,15 @@
     Content-Security-Policy = "default-src 'self'; img-src 'self' data: www.datocms-assets.com; style-src 'self' 'unsafe-inline';"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
+
+[[redirects]]
+  from = "/pvt-*/*"
+  status = 200
+  force = true
+  conditions = {Role = ["pvt"]}
+
+[[redirects]]
+  from = "/pvt-*/*"
+  to = "/login/"
+  status = 302
+  force = true
