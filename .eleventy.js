@@ -65,6 +65,9 @@ module.exports = function (eleventyConfig) {
   // Copy _src/js folder to _site/js
   eleventyConfig.addPassthroughCopy("_src/js");
 
+  // Copy _src/functions folder to _site/functions
+  eleventyConfig.addPassthroughCopy("_src/functions");
+
   // Copy _src/webfonts folder to _site/webfonts
   eleventyConfig.addPassthroughCopy("_src/webfonts");
 
