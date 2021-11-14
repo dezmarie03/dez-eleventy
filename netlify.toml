@@ -13,6 +13,6 @@
 
 [[redirects]]
   from = "/projects/private/*"
-  to = "/login/"
+  to = "/.netlify/functions/redirect"
   status = 200
   force = true
