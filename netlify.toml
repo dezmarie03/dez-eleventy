@@ -9,13 +9,13 @@
     X-Frame-Options = "SAMEORIGIN"
 
 [[redirects]]
-  from = "/projects/pvt-*/*"
+  from = "/projects/private/"
   status = 200
   force = true
   conditions = {Role = ["pvt"]}
 
 [[redirects]]
-  from = "/projects/pvt-*/*"
+  from = "/projects/private/"
   to = "/.netlify/functions/redirect"
   status = 200
   force = true
