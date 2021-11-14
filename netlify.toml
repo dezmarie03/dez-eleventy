@@ -1,3 +1,6 @@
+[[functions]]
+  directory = "functions"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,6 +16,6 @@
 
 [[redirects]]
   from = "/pvt-*/*"
-  to = "/login/"
-  status = 302
+  to = "/.netlify/functions/redirect"
+  status = 200
   force = true
