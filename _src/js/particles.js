@@ -2,6 +2,10 @@
 tsParticles.load("tsparticles", {
   "detectRetina": true,
   "fpsLimit": 60,
+  "backgroundMode": {
+    "enable": true,
+    "zIndex": 0
+  },
   "emitters": {
     "direction": "bottom",
     "size": {
