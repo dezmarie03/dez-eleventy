@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 {% set home = cms.home %}
-<section id="intro" class="grid grid--2-1 glowing" aria-label="Welcome message">
+<section id="intro" class="grid grid--2-1" aria-label="Welcome message">
   <div class="grid__item grid__item--2">
     {% set intro %}{% include './home/intro.md' %}{% endset %}
     {% markdown intro %}
