@@ -18,7 +18,7 @@ tsParticles.load("tsparticles", {
     },
     "rate": {
       "delay": 1,
-      "quantity": 30,
+      "quantity": 20,
     },
   },
   "particles": {
@@ -30,12 +30,7 @@ tsParticles.load("tsparticles", {
       "speed": 3,
     },
     "number": {
-      "density": {
-        "enable": true,
-        "area": 400,
-        "factor": 1000,
-      },
-      "limit": 50,
+      "limit": 20,
       "value": 0,
     },
     "color": {
