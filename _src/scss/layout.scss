@@ -106,6 +106,7 @@ header {
   position: relative;
   overflow: hidden;
   min-height: calc(var(--space-xl) * 3);
+  max-height: 370px;
   display: flex;
   justify-content: center;
 
@@ -139,5 +140,6 @@ header {
 
   .grid--form .decorative {
     order: 2;
+    max-height: 570px;
   }
 }
