@@ -18,7 +18,7 @@ permalink: "projects/{% if project.categories[0] == 'private' %}private/{% endif
       {% markdown role %}
     </aside>
     <div class="project__cover">
-      <picture class="flex">
+      <picture>
         <source srcset="{{ project.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
         <source srcset="{{ project.coverImg.responsiveImage.srcSet }}">
         <img src="{{ project.coverImg.responsiveImage.src }}" alt="{{ project.coverImg.responsiveImage.alt }}" width="{{ project.coverImg.responsiveImage.width }}" height="{{ project.coverImg.responsiveImage.height }}" loading="lazy">
