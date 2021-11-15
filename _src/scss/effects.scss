@@ -33,15 +33,47 @@
   filter: blur(50px);
 }
 
-.link__arrow:after {
+.link__arrow {
   position: relative;
-  top: -0.125rem;
-  right: var(--space-3xs);
-  content: "";
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.link__arrow--right {
+    padding-right: var(--space-2xs);
+
+    &:after {
+      right: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &.link__arrow--left {
+    padding-left: var(--space-2xs);
+
+    &:after {
+      left: 0;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.link__arrow:after {
   width: 0.4em;
   height: 0.4em;
-  transform: rotate(45deg);
-  margin-left: var(--space-2xs);
+}
+
+.link__arrow--right:after {
+  border-right: 0.125rem solid var(--color-link-underline);
+  border-top: 0.125rem solid var(--color-link-underline);
+}
+
+.link__arrow--left:after {
   border-right: 0.125rem solid var(--color-link-underline);
   border-top: 0.125rem solid var(--color-link-underline);
 }
