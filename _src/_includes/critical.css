@@ -263,6 +263,21 @@ header .grid__item {
   width: 100%;
 }
 
+[id="tsparticles"] {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+[id="tsparticles"] canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
 @media screen and (min-width: 600px) {
   header {
     align-items: center;

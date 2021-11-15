@@ -5,13 +5,22 @@ title: Login
 permalink: /login/
 ---
 
-<div class="form__wrapper">
-  <h1>Log in</h1>
-  <div>
-    <form action="/.netlify/functions/login" method="POST" class="flex">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" />
-      <button type="submit">Get access</button>
-    </form>
+<div class="grid grid--form" data-aos="fade-in">
+  <div class="decorative">
+    <img width="1440" height="1024" alt="Animated crystal ball" src="/img/crystal_ball.svg" />
+    <div id="tsparticles"></div>
+  </div>
+  <div class="flex form__wrapper">
+    <h1>Log in</h1>
+    <div>
+      <form action="/.netlify/functions/login" method="POST" class="flex">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <button type="submit">Get access</button>
+      </form>
+    </div>
   </div>
 </div>
+
+<script src="/js/tsparticles.min.js"></script>
+<script src="/js/particles.js"></script>
