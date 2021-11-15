@@ -5,7 +5,7 @@ pagination:
   data: cms.allProjects
   size: 1
   alias: project
-permalink: "projects/{{ project.slug }}/"
+permalink: "projects/{% if project.categories[0] == 'private' %}private/{% endif %}{{ project.slug }}/"
 ---
 
 <article class="project">

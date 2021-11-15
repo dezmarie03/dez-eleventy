@@ -1,7 +1,7 @@
 {% for project in projectlist %}
   {% if loop.first %}<ul class="list--plain grid grid--3">{% endif %}
     <li class="grid__item">
-      <a href="/projects/{{ project.slug }}" class="grid__item__link" data-aos="fade-in">
+      <a {% if project.categories[0] == 'private' %}href="/projects/private/{{ project.slug }}"{% else %}href="/projects/{{ project.slug }}"{% endif %} class="grid__item__link" data-aos="fade-in">
         <div class="grid__item__content">
           <div class="grid__item__image" style="background-image: url({{ project.coverImg.responsiveImage.base64 }}); background-size: cover; padding-top: {{ 100.0 / project.coverImg.responsiveImage.aspectRatio }}%;">
             <picture>
@@ -11,7 +11,12 @@
             </picture>
           </div>
           <div class="grid__item__description">
-            <h5>{{ project.title }}</h5>
+            <h5>
+              {{ project.title }}
+              {% if project.private === true %}
+                <span>(Locked)</span>
+              {% endif %}
+            </h5>
             <p>{{ project.seoMeta.description }}</p>
           </div>
         </div>
