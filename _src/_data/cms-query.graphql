@@ -72,46 +72,50 @@ query MyQuery {
     orderBy: order_ASC
     filter: { _status: { eq: published } }
   ) {
-    body
-    id
-    order
-    slug
+    ...projectData
+  }
+}
+
+fragment projectData on ProjectRecord {
+  body
+  id
+  order
+  slug
+  title
+  roleResponsibilities
+  categories
+  seoMeta {
     title
-    roleResponsibilities
-    private
-    seoMeta {
-      title
-      description
-      image {
-        url
-      }
+    description
+    image {
+      url
     }
-    coverImg {
-      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
-        srcSet
-        webpSrcSet
-        src
-        width
-        height
-        aspectRatio
-        alt
-        bgColor
-        base64
-      }
+  }
+  coverImg {
+    responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
+      srcSet
+      webpSrcSet
+      src
+      width
+      height
+      aspectRatio
+      alt
+      bgColor
+      base64
     }
-    gallery {
-      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
-        srcSet
-        webpSrcSet
-        src
-        width
-        height
-        aspectRatio
-        alt
-        bgColor
-        base64
-      }
-      id
+  }
+  gallery {
+    responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
+      srcSet
+      webpSrcSet
+      src
+      width
+      height
+      aspectRatio
+      alt
+      bgColor
+      base64
     }
+    id
   }
 }
