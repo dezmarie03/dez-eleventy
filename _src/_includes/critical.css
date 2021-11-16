@@ -101,10 +101,6 @@ header .grid__item {
   max-width: 9rem;
 }
 
-.glowing {
-  position: relative;
-}
-
 .link--focus-only:not(:focus) {
   position: absolute;
   clip: rect(0 0 0 0);
