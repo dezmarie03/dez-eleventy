@@ -259,19 +259,39 @@ header .grid__item {
   width: 100%;
 }
 
-[id="tsparticles"] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  z-index: 0;
+.form__wrapper {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-[id="tsparticles"] canvas {
+.decorative img {
+  z-index: 6;
+  object-fit: cover;
+  position: relative;
+}
+
+.tsparticles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
   display: block;
   vertical-align: bottom;
+}
+
+[id="skybox"] {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -315,11 +335,11 @@ header .grid__item {
   }
 
   .grid__item--2 {
-    grid-column: col-start / span 8;
+    grid-column: col-start / span 6;
   }
 
   .grid__item--1 {
-    grid-column: col-start 9 / span 4;
+    grid-column: col-start 7 / span 6;
   }
 }
 

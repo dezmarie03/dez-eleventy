@@ -1,5 +1,5 @@
 // Glitter
-tsParticles.load("tsparticles", {
+tsParticles.load("glitter", {
   "detectRetina": true,
   "fpsLimit": 60,
   "backgroundMode": {

@@ -100,29 +100,47 @@ header {
 
 .form__wrapper {
   padding: var(--space-m);
+}
+
+.grid__item--1 {
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+
+  .decorative {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: var(--space-m);
+
+    &:after {
+      content: "";
+      background: var(--color-body);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 .grid--form .decorative {
   background-color: var(--color-body);
-  position: relative;
-  overflow: hidden;
   min-height: calc(var(--space-xl) * 3);
   max-height: 370px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-
-  img {
-    z-index: 6;
-    object-fit: cover;
-  }
 }
 
 @media screen and (min-width: 700px) {
   .grid__item--2 {
-    padding-right: var(--space-2xl);
+    padding-right: var(--space-xl);
+  }
+
+  .grid__item--1 .decorative {
+    margin-bottom: 0;
   }
 }
 
