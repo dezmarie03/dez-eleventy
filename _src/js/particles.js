@@ -17,8 +17,8 @@ tsParticles.load("tsparticles", {
       "y": 0,
     },
     "rate": {
-      "delay": 1,
-      "quantity": 20,
+      "delay": 2,
+      "quantity": 300,
     },
   },
   "particles": {
@@ -28,10 +28,6 @@ tsParticles.load("tsparticles", {
       "enable": true,
       "outMode": "out",
       "speed": 3,
-    },
-    "number": {
-      "limit": 20,
-      "value": 0,
     },
     "color": {
       "value": [
@@ -45,7 +41,13 @@ tsParticles.load("tsparticles", {
         "enable": true,
         "minimumValue": 2,
       },
-      "value": 4,
+      "value": 3,
+    },
+    "life": {
+      "duration": {
+        "sync": true,
+        "value": 10,
+      },
     },
   },
 });
