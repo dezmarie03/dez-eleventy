@@ -201,24 +201,26 @@ header .grid__item {
   cursor: pointer;
 }
 
-.slider__navigation button:before {
+.slider__navigation button span {
   position: relative;
-  transform: rotate(45deg);
-  content: "";
-  display: inline-block;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.slider__navigation #previous:before {
+.slider__navigation button span:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.slider__navigation #previous span:before {
   transform: rotate(-135deg);
-  left: 25%;
 }
 
 .slider__navigation #next {
   right: 0;
-}
-
-.slider__navigation #next:before {
-  right: 25%;
 }
 
 .slider__tabs {

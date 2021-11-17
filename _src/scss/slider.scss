@@ -3,12 +3,11 @@
 }
 
 .slider__navigation button {
-  padding: var(--space-2xs);
-  background-color: var(--color-link-underline);
-  color: var(--color-code);
+  width: var(--space-m-l);
+  height: var(--space-m-l);
 }
 
-.slider__navigation button:before {
+.slider__navigation button span:before {
   width: var(--space-2xs);
   height: var(--space-2xs);
   border-right: 0.125rem solid var(--color-code);

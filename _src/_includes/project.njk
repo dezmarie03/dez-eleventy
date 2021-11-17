@@ -32,10 +32,14 @@ permalink: "projects/{% if project.categories[0] == 'private' %}private/{% endif
   <div id="slider" class="grid slider" data-aos="fade-in">
     <ul aria-label="Next and previous item controls" class="slider__navigation flex list--plain">
       <li class="previous">
-        <button id="previous" role="button"></button>
+        <button id="previous" role="button">
+          <span class="flex" focusable="false"></span>
+        </button>
       </li>
       <li class="next">
-        <button id="next" role="button"></button>
+        <button id="next" role="button">
+          <span class="flex" focusable="false"></span>
+        </button>
       </li>
     </ul>
     <div role="region" aria-label="Project image gallery" tabindex="0" class="slider__filmstrip">
