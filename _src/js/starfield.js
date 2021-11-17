@@ -1,8 +1,6 @@
 // Star field
 // Reference: https://codepen.io/louisesagna/pen/JqewVO
 (function createStars() {
-  var width = window.innerWidth;
-  var height = window.innerHeight;
   var sky = document.getElementById("skybox");
   var nameSpace = "http://www.w3.org/2000/svg";
 
@@ -16,15 +14,15 @@
   let numberOfStars = 300;
 
   if (sky) {
-    sky.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    sky.setAttribute("viewBox", `0 0 1292 939`);
 
     for (let i = 0; i < numberOfStars; i++) {
       let circle = document.createElementNS(nameSpace, "circle");
 
       setAttributes(circle, {
         "r": 3,
-        "cx": Math.floor(Math.random() * width),
-        "cy": Math.floor(Math.random() * height),
+        "cx": Math.floor(Math.random() * 1292),
+        "cy": Math.floor(Math.random() * 939),
         "fill": "#D38DF1",
       });
 
