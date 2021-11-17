@@ -39,9 +39,9 @@ tsParticles.load("glitter", {
     "size": {
       "random": {
         "enable": true,
-        "minimumValue": 2,
+        "minimumValue": 1,
       },
-      "value": 3,
+      "value": 2,
     },
     "life": {
       "duration": {
