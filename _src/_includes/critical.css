@@ -313,10 +313,10 @@ canvas {
 [id="skybox"] {
   z-index: 1;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
 }
 
 @media screen and (min-width: 600px) {
