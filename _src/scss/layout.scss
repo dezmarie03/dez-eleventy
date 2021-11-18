@@ -121,6 +121,10 @@ header {
   background-color: var(--color-body);
 }
 
+.tmpl-contact-page .decorative:after {
+  background-color: var(--color-body);
+}
+
 @media screen and (min-width: 700px) {
   .grid__item--2 {
     padding-right: var(--space-xl);

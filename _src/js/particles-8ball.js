@@ -1,15 +1,6 @@
 (function () {
   tsParticles.load("8ball", {
     autoPlay: true,
-    background: {
-      color: {
-        value: "#240566"
-      },
-    },
-    backgroundMode: {
-      enable: true,
-      zIndex: 0
-    },
     detectRetina: true,
     duration: 0,
     fpsLimit: 60,
