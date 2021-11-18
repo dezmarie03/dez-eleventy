@@ -43,24 +43,24 @@
   <body>
     <div class="wrapper">
       <a href="#content" class="link--focus-only">Skip to content</a>
+      <header class="grid" aria-label="Main navigation">
+        <div class="brand">
+          <a rel="me" href="{{ '/' | url }}" title="Home">
+            <img width="219" height="25" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
+          </a>
+        </div>
+        <nav>
+          {% set navPages = collections.all | eleventyNavigation %}
+          <ul class="grid list--plain">
+          {%- for entry in navPages %}
+            <li{% if entry.url in page.url %} class="grid__item active strong"{% endif %}>
+              <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
+          </ul>
+        </nav>
+      </header>
       <div class="container">
-        <header class="grid" aria-label="Main navigation">
-          <div class="brand">
-            <a rel="me" href="{{ '/' | url }}" title="Home">
-              <img width="219" height="25" alt="{{ metadata.brand }}" src="/img/logo_full.svg" />
-            </a>
-          </div>
-          <nav>
-            {% set navPages = collections.all | eleventyNavigation %}
-            <ul class="grid list--plain">
-            {%- for entry in navPages %}
-              <li{% if entry.url in page.url %} class="grid__item active strong"{% endif %}>
-                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-              </li>
-            {%- endfor %}
-            </ul>
-          </nav>
-        </header>
         <main{% if templateClass %} class="{{ templateClass }}"{% endif %} id="content" aria-label="Main content">
           {{ content | safe }}
         </main>

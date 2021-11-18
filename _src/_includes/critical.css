@@ -36,11 +36,13 @@ aside h3 {
 .wrapper {
   position: relative;
   overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .container {
   width: 100%;
-  max-width: 77.25rem;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
@@ -71,6 +73,10 @@ aside h3 {
 
 .flex--end {
   justify-content: flex-end;
+}
+
+.items--center {
+  align-items: center;
 }
 
 header,
@@ -302,25 +308,17 @@ canvas {
 }
 
 @media screen and (min-width: 700px) {
-  .grid__item--2,
-  .grid__item--1 {
-    grid-row: 1;
-  }
-
-  .grid__item--2 {
-    grid-column: col-start / span 6;
-  }
-
-  .grid__item--1 {
-    grid-column: col-start 9 / span 6;
-  }
-
   .wrapper--rounded img {
     max-width: 100%;
   }
 }
 
 @media screen and (min-width: 800px) {
+  .grid__item--2,
+  .grid__item--1 {
+    grid-row: 1;
+  }
+
   .grid--3 {
     grid-template-columns: repeat(2, 1fr);
   }

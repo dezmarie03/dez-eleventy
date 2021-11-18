@@ -7,7 +7,7 @@ figure {
 }
 
 main {
-  padding: var(--space-m-l) 0;
+  padding: var(--space-xl) 0;
 }
 
 article {
@@ -15,7 +15,7 @@ article {
 }
 
 .wrapper {
-  padding: var(--space-s-m);
+  padding: var(--space-s) var(--space-s-m);
 }
 
 .wrapper--rounded {
@@ -28,10 +28,10 @@ article {
 }
 
 .grid--3 {
-  margin: 0 calc(var(--space-m-l) * -1);
+  margin: 0 calc(var(--space-m) * -1);
 
   .grid__item {
-    margin: var(--space-s-m) var(--space-m-l) var(--space-m-l);
+    margin: var(--space-m);
   }
 }
 
@@ -98,7 +98,7 @@ header {
 }
 
 .decorative {
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
 
   .tsparticles-canvas-el {
     position: absolute !important;
