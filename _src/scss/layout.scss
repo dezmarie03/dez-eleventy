@@ -96,6 +96,12 @@ header {
 .grid--form {
   background-color: var(--color-code);
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+
+  .decorative {
+    background-color: var(--color-body);
+    min-height: calc(var(--space-xl) * 3);
+    max-height: 370px;
+  }
 }
 
 .form__wrapper {
@@ -107,31 +113,12 @@ header {
   justify-content: center;
 
   .decorative {
-    position: relative;
-    overflow: hidden;
     margin-bottom: var(--space-m);
-
-    &:after {
-      content: "";
-      background: var(--color-body);
-      width: 99%;
-      height: 99%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 }
 
-.grid--form .decorative {
+[id="skybox"] {
   background-color: var(--color-body);
-  min-height: calc(var(--space-xl) * 3);
-  max-height: 370px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 @media screen and (min-width: 700px) {
@@ -147,10 +134,10 @@ header {
 @media screen and (min-width: 800px) {
   .grid--aside {
     grid-template-columns: 1fr calc(var(--space-3xl) * 3);
-  }
 
-  .grid--aside aside {
-    padding: var(--space-m);
+    aside {
+      padding: var(--space-m);
+    }
   }
 }
 
@@ -158,10 +145,14 @@ header {
   .grid--form {
     grid-template-columns: calc(var(--space-3xl) * 3) 1fr;
     min-height: 60vh;
+
+    .decorative {
+      order: 2;
+      max-height: 570px;
+    }
   }
 
-  .grid--form .decorative {
-    order: 2;
-    max-height: 570px;
+  .tmpl-contact-page .decorative {
+    max-height: 640px;
   }
 }

@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-templateClass: tmpl-page
+templateClass: tmpl-contact-page
 title: Get in touch
 permalink: /contact/
 eleventyNavigation:
@@ -8,14 +8,23 @@ eleventyNavigation:
   order: 4
 ---
 
-<section class="readable">
-  <h1 data-aos="fade-in">{{ title }}</h1>
-
-  <h2 data-aos="fade-in">General inquiries</h2>
-  <p>If you’re a fellow front-end person or designer, let’s connect! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>.</p>
-
-  <p data-aos="fade-in">Thanks for visiting me here. You can also find me on <a href="{{ metadata.author.twitter }}" target="_blank" rel="noopener">Twitter</a>, <a href="{{ metadata.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>, <a href="{{ metadata.author.github }}" target="_blank" rel="noopener">GitHub, <a href="{{ metadata.author.dribbble }}" target="_blank" rel="noopener">Dribbble</a>, <a href="{{ metadata.author.instagram }}" target="_blank" rel="noopener">Instagram</a>, and <a href="{{ metadata.author.codepen }}" target="_blank" rel="noopener">CodePen</a>.</p>
-
-  <h2 data-aos="fade-in">Recruiting?</h2>
-  <p data-aos="fade-in">If you’re representing companies that have positions for: Product Designers, UX Developers, Junior Front End Developers, or Design Technologists, I’d love to hear more! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a> or reach out through <a href="{{ metadata.author.linkedin }}" rel="noopner" target="_blank">LinkedIn</a>.</p>
+<section class="grid grid--2-1" data-aos="fade-in">
+  <div class="grid__item grid__item--2">
+    <h1>{{ title }}</h1>
+    <p class="step-4">Thanks for visiting me here! You can also find me on <a href="{{ metadata.author.twitter }}" target="_blank" rel="noopener">Twitter</a>, <a href="{{ metadata.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>, <a href="{{ metadata.author.github }}" target="_blank" rel="noopener">GitHub, <a href="{{ metadata.author.dribbble }}" target="_blank" rel="noopener">Dribbble</a>, <a href="{{ metadata.author.instagram }}" target="_blank" rel="noopener">Instagram</a>, and <a href="{{ metadata.author.codepen }}" target="_blank" rel="noopener">CodePen</a>.</p>
+    <h2>General inquiries</h2>
+    <p>If you’re a fellow front-end person or designer, let’s connect! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>.</p>
+    <h2>Recruiting?</h2>
+    <p>If you’re representing companies that have positions for: Product Designers, UX Developers, Junior Front End Developers, or Design Technologists, I’d love to hear more! You can reach me by email at <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a> or reach out through <a href="{{ metadata.author.linkedin }}" rel="noopner" target="_blank">LinkedIn</a>.</p>
+  </div>
+  <div class="grid__item grid__item--1">
+    <div class="decorative">
+      <img width="1140" height="860" alt="" src="/img/contact_graphic.svg" />
+      <div class="tsparticles">
+        <div id="8ball"></div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script src="/js/particles-8ball.js"></script>

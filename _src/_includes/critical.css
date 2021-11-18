@@ -267,6 +267,22 @@ header .grid__item {
   justify-content: center;
 }
 
+.decorative {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.decorative:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
 .decorative img {
   z-index: 6;
   object-fit: cover;
@@ -274,12 +290,17 @@ header .grid__item {
 }
 
 .tsparticles {
+  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  display: block;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
 }
 
 canvas {
@@ -288,12 +309,12 @@ canvas {
 }
 
 [id="skybox"] {
-  width: 100%;
-  height: 100%;
   z-index: 1;
   position: absolute;
+  width: 100%;
+  height: 100%;
   left: 0;
-  top: 0;
+  top: 1px;
 }
 
 @media screen and (min-width: 600px) {
