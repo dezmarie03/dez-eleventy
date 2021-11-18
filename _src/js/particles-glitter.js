@@ -22,15 +22,15 @@ tsParticles.load("glitter", {
     direction: "bottom",
     size: {
       width: 100,
-      height: 100,
+      height: 0,
     },
     position: {
       x: 0,
       y: 0,
     },
     rate: {
-      delay: 2,
-      quantity: 300,
+      delay: 0,
+      quantity: 10,
     },
     particles: {
       move: {
@@ -39,14 +39,14 @@ tsParticles.load("glitter", {
         direction: "bottom",
         enable: true,
         outMode: "out",
-        speed: 3,
+        speed: 2,
       },
       shape: "circle",
       color: {
         value: [
-          "#987008",
+          "#FECFFE",
           "#EEAC03",
-          "#FFE5A3",
+          "#7D07F2",
         ],
       },
       size: {

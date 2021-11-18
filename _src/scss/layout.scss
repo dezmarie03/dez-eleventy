@@ -28,10 +28,10 @@ article {
 }
 
 .grid--3 {
-  margin: 0 calc(var(--space-m) * -1);
+  margin: 0 calc(var(--space-s) * -1);
 
   .grid__item {
-    margin: var(--space-m);
+    margin: var(--space-s);
   }
 }
 
