@@ -73,8 +73,12 @@ aside h3 {
   justify-content: flex-end;
 }
 
+header,
 header .grid {
-  justify-content: start;
+  justify-content: center;
+}
+
+header .grid {
   grid-auto-flow: column;
 }
 
@@ -320,6 +324,10 @@ canvas {
   header {
     align-items: center;
     grid-auto-flow: column;
+  }
+
+  header {
+    justify-content: initial;
   }
 
   header .grid {
