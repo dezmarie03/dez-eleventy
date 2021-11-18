@@ -6,6 +6,10 @@
         value: "#240566"
       },
     },
+    backgroundMode: {
+      enable: true,
+      zIndex: 0
+    },
     detectRetina: true,
     duration: 0,
     fpsLimit: 60,
