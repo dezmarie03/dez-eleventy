@@ -53,6 +53,7 @@
         },
       },
       move: {
+        bounce: false,
         enable: true,
         speed: 1,
         direction: "none",

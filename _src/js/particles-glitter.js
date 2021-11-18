@@ -10,6 +10,9 @@ tsParticles.load("glitter", {
     number: {
       value: 0,
     },
+    move: {
+      bounce: false,
+    },
   },
   emitters: {
     direction: "bottom",
