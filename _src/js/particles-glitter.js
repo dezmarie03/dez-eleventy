@@ -2,16 +2,20 @@
 tsParticles.load("glitter", {
   detectRetina: true,
   fpsLimit: 60,
-  backgroundMode: {
-    enable: true,
-    zIndex: 0
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onclick: {
+        enable: false,
+      },
+      onhover: {
+        enable: false,
+      },
+    },
   },
   particles: {
     number: {
       value: 0,
-    },
-    move: {
-      bounce: false,
     },
   },
   emitters: {
@@ -31,6 +35,7 @@ tsParticles.load("glitter", {
     particles: {
       move: {
         angle: 90,
+        bounce: false,
         direction: "bottom",
         enable: true,
         outMode: "out",
