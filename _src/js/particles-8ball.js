@@ -21,7 +21,7 @@
     particles: {
       number: {
         limit: 0,
-        value: 3,
+        value: 2,
       },
       size: {
         value: 60,
