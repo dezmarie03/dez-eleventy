@@ -15,6 +15,9 @@ tsParticles.load("glitter", {
   },
   particles: {
     number: {
+      density: {
+        enable: true
+      },
       limit: 0,
       value: 0,
     },

@@ -20,10 +20,6 @@
     },
     particles: {
       number: {
-        density: {
-          enable: true,
-          area: 800
-        },
         limit: 0,
         value: 3,
       },
@@ -56,15 +52,17 @@
         value: 0,
         direction: "clockwise",
         animation: {
-          speed: 3,
+          speed: 5,
           enable: true,
         },
       },
       move: {
-        bounce: false,
         enable: true,
         speed: 1,
         direction: "none",
+        outModes: {
+          default: "out",
+        },
       },
     },
   });
