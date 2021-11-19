@@ -22,31 +22,28 @@ tsParticles.load("glitter", {
       value: 0,
     },
     move: {
+      enable: true,
+      speed: 1,
+      direction: "bottom",
+      straight: false,
       bounce: false,
     },
   },
   emitters: {
     direction: "bottom",
     size: {
-      width: 50,
-      height: 50,
+      width: 25,
+      height: 0,
     },
     position: {
       x: 50,
       y: 0,
     },
     rate: {
-      delay: 0,
+      delay: 1,
       quantity: 1,
     },
     particles: {
-      move: {
-        angle: 90,
-        direction: "bottom",
-        enable: true,
-        outMode: "out",
-        speed: 2,
-      },
       shape: "circle",
       color: {
         value: [
@@ -54,19 +51,43 @@ tsParticles.load("glitter", {
           "#AA86F8",
         ],
       },
+      opacity: {
+        value: 0.5,
+      },
       size: {
         random: {
           enable: true,
           minimumValue: 1,
         },
-        value: 2,
+        value: 3,
       },
-      life: {
-        duration: {
-          sync: true,
-          value: 10,
-        },
+    },
+  },
+  absorbers: {
+    color: {
+      value: "#240566",
+    },
+    draggable: false,
+    opacity: 1,
+    destroy: true,
+    orbits: false,
+    size: {
+      random: {
+        enable: false,
       },
+      value: {
+        min: 10,
+        max: 70,
+      },
+      density: 10,
+      limit: {
+        radius: 1,
+        mass: 1,
+      },
+    },
+    position: {
+      x: 50,
+      y: 70,
     },
   },
 });
