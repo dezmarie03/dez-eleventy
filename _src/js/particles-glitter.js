@@ -17,25 +17,27 @@ tsParticles.load("glitter", {
     number: {
       value: 0,
     },
+    move: {
+      bounce: false,
+    },
   },
   emitters: {
     direction: "bottom",
     size: {
-      width: 100,
-      height: 0,
+      width: 50,
+      height: 50,
     },
     position: {
-      x: 0,
+      x: 50,
       y: 0,
     },
     rate: {
       delay: 0,
-      quantity: 10,
+      quantity: 1,
     },
     particles: {
       move: {
         angle: 90,
-        bounce: false,
         direction: "bottom",
         enable: true,
         outMode: "out",
@@ -45,8 +47,8 @@ tsParticles.load("glitter", {
       color: {
         value: [
           "#FECFFE",
-          "#EEAC03",
-          "#7D07F2",
+          "#F7F3FF",
+          "#AA86F8",
         ],
       },
       size: {
