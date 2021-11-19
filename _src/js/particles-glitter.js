@@ -15,6 +15,7 @@ tsParticles.load("glitter", {
   },
   particles: {
     number: {
+      limit: 0,
       value: 0,
     },
     move: {
@@ -47,7 +48,6 @@ tsParticles.load("glitter", {
       color: {
         value: [
           "#FECFFE",
-          "#F7F3FF",
           "#AA86F8",
         ],
       },
