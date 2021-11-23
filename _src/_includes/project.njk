@@ -17,7 +17,7 @@ permalink: "projects/{% if project.categories[0] == 'private' %}private/{% endif
       {% set role %}{% include '../projects/project-role.md' %}{% endset %}
       {% markdown role %}
     </aside>
-    <div class="project__cover">
+    <div class="project__cover" style="padding-top: {{ 100.0 / project.coverImg.responsiveImage.aspectRatio }}%; background-color: {{ project.coverAccent.hex }}">
       <picture>
         <source srcset="{{ project.coverImg.responsiveImage.webpSrcSet }}" type="image/webp">
         <source srcset="{{ project.coverImg.responsiveImage.srcSet }}">

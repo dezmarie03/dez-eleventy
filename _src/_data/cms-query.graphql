@@ -39,32 +39,7 @@ query MyQuery {
     orderBy: date_DESC
     filter: { _status: { eq: published } }
   ) {
-    body
-    id
-    slug
-    title
-    seoMeta {
-      title
-      description
-      image {
-        url
-      }
-    }
-    coverImg {
-      responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
-        srcSet
-        webpSrcSet
-        src
-        width
-        height
-        aspectRatio
-        alt
-        bgColor
-        base64
-      }
-    }
-    tags
-    date
+    ...postData
   }
   allProjects(
     first: "100"
@@ -74,6 +49,35 @@ query MyQuery {
   ) {
     ...projectData
   }
+}
+
+fragment postData on PostRecord {
+  body
+  id
+  slug
+  title
+  seoMeta {
+    title
+    description
+    image {
+      url
+    }
+  }
+  coverImg {
+    responsiveImage(imgixParams: { fm: png, q: 75, fit: max, w: 500 }) {
+      srcSet
+      webpSrcSet
+      src
+      width
+      height
+      aspectRatio
+      alt
+      bgColor
+      base64
+    }
+  }
+  tags
+  date
 }
 
 fragment projectData on ProjectRecord {
@@ -117,5 +121,8 @@ fragment projectData on ProjectRecord {
       base64
     }
     id
+  }
+  coverAccent {
+    hex
   }
 }

@@ -153,18 +153,23 @@ header .grid__item {
   margin: 0;
 }
 
-.grid__item__image {
+.grid__item__image,
+.project__cover {
   position: relative;
+  text-align: center;
 }
 
-.grid__item__image picture {
+.grid__item__image picture,
+.project__cover picture {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
   width: 100%;
+  transform: translateY(-50%);
 }
 
-.grid__item__image img {
+.grid__item__image img,
+.project__cover img {
   width: auto;
 }
 
@@ -283,8 +288,12 @@ header .grid__item {
 }
 
 canvas {
-  display: block;
   vertical-align: bottom;
+}
+
+canvas,
+picture {
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
